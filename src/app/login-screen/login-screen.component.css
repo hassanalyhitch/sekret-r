@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
+p {
+  font-family: 'Poppins';
+  font-weight: 200;
+  font-size: 30px;
+}
+button,
+input,
+label {
+  font-family: 'Poppins';
+}
+.heading {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 2.5em;
+  margin-top: 3em;
+}
+.sub-heading {
+  font-family: 'Poppins';
+  font-weight: 200;
+  font-size: 1.5em;
+  margin-bottom: 2.8em;
+}
+.catch-phrase {
+  text-decoration: overline;
+  margin-top: 0px !important;
+}
+.color-primary {
+  background-color: #009ee2 !important;
+}
+.color-primary-dark {
+  background-color: #2774ae !important;
+}
+.color-accent {
+  background-color: #ff611d !important;
+}
+.text-black {
+  color: #1d1d1b;
+}
+.text-compliment {
+  color: #575756;
+}
+.maxpool-logo {
+  position: absolute;
+  padding: 0%;
+  margin: 0%;
+  top: 0;
+}
+.overlay-dark {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0% !important;
+  border: 0px !important;
+  padding: 0% !important;
+  overflow: hidden !important;
+  transition: 0.4s ease-out;
+}
+
+.banner-img-overlay {
+  opacity: 0.5;
+  transition: 0.4s ease-out;
+}
+.banner-img-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0.9;
+  transition: 0.4s ease-out;
+}
+
+.banner-img {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  padding: 0% !important;
+  margin: 0 !important;
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  box-sizing: border-box !important;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: absolute;
+}
+
+.material-textfield {
+  position: relative;
+  background-color: #e6ecf5;
+  width: 100%;
+}
+
+.material-textfield > label {
+  position: absolute;
+  font-size: 1rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #575756;
+  background-color: inherit;
+  padding: 0 0.3rem;
+  margin: 0 0.5rem;
+  transition: 0.1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+}
+.material-textfield > input {
+  font-size: 1rem;
+  outline: none;
+  border: 0.15em solid #575756;
+  border-radius: 5px;
+  padding: 1rem 0.7rem;
+  width: 100%;
+  color: #575756;
+  background-color: inherit;
+  transition: 0.1s ease-out;
+}
+.material-textfield > input:focus {
+  border-color: #009ee2;
+}
+.material-textfield > input:focus + label {
+  color: #009ee2;
+  background-color: inherit;
+  top: 0;
+  transform: translateY(-50%) scale(0.9);
+}
+.material-textfield > input:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%) scale(0.9);
+}
+
+.btn-primary {
+  background-color: #009ee2 !important;
+  border-color: #009ee2 !important;
+  transition: 0.2s ease-out;
+}
+.btn-primary:hover {
+  background-color: #2774ae !important;
+  border-color: #2774ae !important;
+}
+.btn-outline-primary {
+  border-color: #009ee2 !important;
+  transition: 0.2s ease-out;
+}
+.btn-outline-primary:hover {
+  background-color: #009ee2;
+  color: white;
+}
+button[disabled] {
+  border-color: #d3d3d3 !important;
+  cursor: default;
+}
+button[disabled]:hover {
+  border-color: #d3d3d3 !important;
+  background-color: transparent;
+  cursor: default;
+}
+button[disabled]:hover#sign-in-btn {
+  color: white;
+}

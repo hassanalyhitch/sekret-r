@@ -1,0 +1,54 @@
+<div class="w-100 current-master-nav pb-4">
+  <div class="pl-3 pt-3 pb-3 d-flex w-100 bg-white master-nav-title">
+    <strong class="section-header" #masternav_title>
+      Inbox
+    </strong>
+  </div>
+
+  <div class="container w-100">
+
+    <div class="row p-2">
+      <i class="material-icons subheader-darkbrown">arrow_drop_down</i>
+      <span class="section-subheader"> Chat </span>
+    </div>
+    <div class="col-xs-12 d-block flex-wrap" *ngIf="true">
+        <ul class="list-group w-100">
+          <li class="list-group-item d-flex align-items-center masternav-item" (click)="onSelect('chat')" >
+              <span class="material-icons mr-3">person_pin</span>
+              <span class="align-self-center "> Broker Name  </span>
+          </li> 
+          <li class="list-group-item d-flex align-items-center non-active">
+              <span class="material-icons mr-3">adb</span>
+              <span class="align-self-center "> Maxpool Bot  </span>
+          </li> 
+        </ul>
+    </div>
+
+    
+  <div class="row p-2 mt-3">
+    <i class="material-icons subheader-darkbrown">arrow_drop_down</i>
+    <span class="section-subheader"> Notifications </span>
+  </div>
+  <div class="col-xs-12 d-block flex-wrap" *ngIf="true">
+      <ul class="list-group w-100 ">
+        <li class="list-group-item d-flex align-items-center non-active">
+            <i class="material-icons mr-3">notifications</i>
+            <span class="align-self-center "> You have 0 notifications </span>
+        </li> 
+      </ul>
+  </div>
+
+  <div class="row p-2 mt-3">
+    <i class="material-icons subheader-darkbrown">arrow_drop_down</i>
+    <span class="section-subheader"> Report </span>
+  </div>
+  <div class="col-xs-12 d-block flex-wrap" *ngIf="true">
+      <ul class="list-group w-100 ">
+        <li class="list-group-item non-active">
+          Notification of Claim 
+        </li> 
+      </ul>
+  </div>
+
+  </div>
+</div>

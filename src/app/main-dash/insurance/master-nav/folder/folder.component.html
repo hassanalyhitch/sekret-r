@@ -1,0 +1,17 @@
+<div
+  class="d-flex flex-row p-2 folder"
+  [id]="folder.id"
+  (click)="onSelect(folder.id)"
+  [ngClass]="{ 'folder-active': folder.isSelected }"
+>
+  <div class="">
+    <img
+      src="https://img.icons8.com/color/48/000000/folder-invoices--v1.png"
+      class="img-responsive folder-icon"
+      style="max-width:36px;"
+    />
+  </div>
+  <div class="d-flex flex-fill flex-column">
+    <p class="folder-name align-self-start my-auto">{{ folder.title }}</p>
+  </div>
+</div>

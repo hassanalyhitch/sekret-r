@@ -1,0 +1,22 @@
+.desktop-nav {
+  width: 4.4em;
+  max-width: 4.4em;
+  box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.25);
+  background-color: whitesmoke;
+  display: flex;
+  z-index: 1px;
+}
+.nav-items > a {
+  text-decoration: none;
+  color: #1d1d1b;
+  font-size: 14px;
+}
+.nav-items > a:hover {
+  text-decoration: none;
+  color: #009ee2;
+}
+
+.nav-items > a.active {
+  text-decoration: none;
+  color: #009ee2;
+}

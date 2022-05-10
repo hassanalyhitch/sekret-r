@@ -1,0 +1,30 @@
+<div class="">
+  <div
+    class="
+      d-flex
+      flex-column
+      justify-content-center
+      align-items-center
+      w-100
+      bottom-sheet
+    "
+  >
+    <div
+      class="
+        bottomsheet-toggle
+        d-flex
+        flex-column
+        justify-content-center
+        align-items-center
+        w-100
+      "
+      (click)="onToggle()"
+    >
+      <i class="material-icons py-2" style="color:#009ee2;">more_horiz</i>
+    </div>
+    <div class="w-100 bottom-sheet-content" [ngClass]="{'collapsed': bottomsheetToggle }">
+      <!-- selected nav component  -->
+      <app-master-nav (selection)="onFolderSelect($event)"></app-master-nav>
+    </div>
+  </div>
+</div>

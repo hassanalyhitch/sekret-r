@@ -1,0 +1,56 @@
+<div class="nav-bg-container" id="nav-bg-container">
+  <div id="mobile-nav" class="min-vh-100 mobile-nav d-md-flex flex-column pt-5 ">
+  <div class="d-flex flex-column justify-content-center pt-3 nav-items">
+    <a
+      routerLink="/insurance"
+      routerLinkActive="active"
+      class="d-flex flex-row align-items-center"
+    >
+      <i class="material-icons align-self-center mx-3">folder_open</i>
+      Insurances
+    </a>
+    <a
+      [routerLink]="['/inbox']"
+      routerLinkActive="active"
+      class="d-flex flex-row align-items-center pt-3"
+    >
+      <i class="material-icons align-self-center mx-3">message</i>
+      Inbox
+    </a>
+    <a
+      [routerLink]="['/broker']"
+      routerLinkActive="active"
+      class="d-flex flex-row align-items-center pt-3"
+    >
+      <i class="material-icons align-self-center mx-3">person_pin</i>
+      My Broker
+    </a>
+    <a
+      [routerLink]="['/profile']"
+      routerLinkActive="active"
+      class="d-flex flex-row align-items-center pt-3"
+    >
+      <i class="material-icons align-self-center mx-3">person_outline</i>
+      My Profile
+    </a>
+    <a
+      [routerLink]="['/settings']"
+      routerLinkActive="active"
+      class="d-flex flex-row align-items-center pt-3"
+    >
+      <i class="material-icons align-self-center mx-3">settings</i>
+      Settings
+    </a>
+  </div>
+
+  <!-- logout -->
+  <div class="d-flex flex-column justify-content-center pt-3 nav-items mb-5">
+    <a
+      class="d-flex flex-row align-items-center pb-3"
+    >
+      <i class="material-icons align-self-center mx-3">logout</i>
+      Sign Out
+    </a>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="min-vh-100 w-100 main-container">
+  <div class="w-100">
+    <div class="col-xs-12 d-flex">
+      <div class="">
+        <!-- nav -->
+        <app-desktop-nav></app-desktop-nav>
+      </div>
+
+      <div class="w-100">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+
+  <!-- APPBAR -->
+  <div class="col-xs-12 d-flex flex-column">
+    <!-- brand row -->
+    <div class="appbar d-flex align-items-center">
+      <i
+        class="material-icons mx-4 d-md-none menu-toggle"
+        id="menu-toggle"
+        (click)="navigationDrawerToggle()"
+        >dehaze</i
+      >
+      <span class="brand-name">Sekretär</span>
+    </div>
+  </div>
+  
+  <app-mobile-nav></app-mobile-nav>
+</div>

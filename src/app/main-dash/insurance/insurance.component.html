@@ -1,0 +1,28 @@
+<div class="h-100 col-xs-12 d-flex flex-wrap">
+  <div
+    class="col-md-4 col-lg-3"
+    style="margin-top:3.4em;"
+    [ngClass]="{ 'list-container': contentSelected }"
+  >
+    <!-- selected nav component  -->
+    <app-master-nav
+      (selection)="onFolderSelect($event)"
+      (reset)="contentSelected = false"
+    ></app-master-nav>
+  </div>
+
+  <div
+    class="justify-content-center col-xs-12 col-md-8 col-lg-9 pl-2"
+    [ngClass]="{ 'detail-container': !contentSelected }"
+  >
+    <!-- selected main content  -->
+    <app-detail-component *ngIf="contentSelected" [folder]="selectedFolder">
+    </app-detail-component>
+    <app-detail-placeholder *ngIf="!contentSelected"> </app-detail-placeholder>
+    <!-- <router-outlet></router-outlet> -->
+  </div>
+</div>
+
+<div class="d-none col-xs-12">
+  <app-insurance-bottomsheet></app-insurance-bottomsheet>
+</div>

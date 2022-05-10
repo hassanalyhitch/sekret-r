@@ -1,0 +1,132 @@
+<div class="col-12 min-vh-100">
+  <div class="row">
+    <!-- main column -->
+    <div
+      class="
+        col-sm-7 col-md-7 col-lg-8 col-xl-9
+        d-none d-sm-block d-md-block d-lg-block d-xl-block
+        bg-info
+      "
+    >
+      <div
+        class="row min-vh-100 d-flex justify-content-center"
+        style="overflow:hidden;"
+      >
+        <div class="w-100 min-vh-100 justify-content-center">
+          <img
+            class="banner-img"
+            src="https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024"
+            alt="Sheep 9"
+          />
+          <div
+            class="
+              card-img-overlay
+              text-white
+              d-flex
+              flex-column
+              justify-content-center
+              align-items-center
+              overlay-dark
+              banner-img-overlay
+            "
+          >
+            <h1 class="heading text-center">
+              A new dimension in customer care.
+            </h1>
+            <h2 class="sub-heading text-center">
+              The brokerage future has begun.
+            </h2>
+            <h1 class="heading text-center catch-phrase">
+              Easy. Fast. Digital.
+            </h1>
+          </div>
+        </div>
+        <div class="row maxpool-logo">
+          <img
+            src="../assets/phonix-maxpool-logo-triangle.svg"
+            alt="sekretaer_logo"
+            class="img-responsive mx-auto"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- login column -->
+    <div
+      class="col-xs-12 col-sm-5 col-md-5 col-lg-4 col-xl-3 min-vh-100"
+      style="
+overflow: hidden !important;"
+    >
+      <div class="row justify-content-center">
+        <div class="container min-vh-100 justify-content-center">
+          <div class="row min-vh-100">
+            <div
+              class="
+                col-12
+                align-self-center
+                d-flex
+                justify-content-center
+                align-items-center
+                mx-auto
+              "
+            >
+              <div
+                class="
+                  form-group
+                  w-100
+                  d-flex
+                  flex-column
+                  align-items-center
+                  mx-4
+                "
+              >
+                <img
+                  src="../assets/logo.svg"
+                  alt="sekretaer_logo"
+                  class="bg-white rounded-circle img-responsive mx-auto"
+                  style="max-width:60%"
+                />
+                <br />
+
+                <div class="material-textfield mt-4">
+                  <input placeholder=" " type="text" [(ngModel)]="username" />
+                  <label>Username</label>
+                </div>
+                <div class="material-textfield mt-4">
+                  <input
+                    placeholder=" "
+                    type="password"
+                    [(ngModel)]="password"
+                  />
+                  <label>Password</label>
+                </div>
+                <div class="row mt-4 w-100 align-items-left">
+                  <label for="checkbox-signin" class="text-compliment">
+                    <input
+                      type="checkbox"
+                      id="checkbox-signin"
+                      name="checkbox-signin"
+                      style="width:36px;"
+                    />
+                    Stay signed in?
+                  </label>
+                </div>
+                <div class="mt-2 w-100">
+                  <button
+                    id="sign-in-btn"
+                    class="btn btn-primary w-100 py-2"
+                    [disabled]="!(username.length >= 2 && password.length > 1)"
+                    (click)="validateUser()"
+                    style="font-size:20px;"
+                  >
+                    Sign in
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
