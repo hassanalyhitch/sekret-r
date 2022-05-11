@@ -19,14 +19,81 @@ export class MasterNavComponent implements OnInit {
   folders: {
     title: string;
     id: number;
+    details: {
+      CustomerId01: string;
+      InsuranceId01: string;
+      InsuranceNumber: string;
+      CompanyId: string;
+      CompanyLong: string;
+      CompanyShort: string;
+      StartDate: string;
+      EndDate: string;
+      Price: string;
+      Paymethod: string;
+      Branch: string;
+      BranchShort: string;
+      CustomerName: string;
+    };
+    files: {
+      name: string;
+      fileUrl: string;
+    }[];
     isSelected: boolean;
   }[] = [
-    { title: 'Folder 1', id: 1, isSelected: false },
-    { title: 'Folder 2', id: 2, isSelected: false },
-    { title: 'Folder 3', id: 3, isSelected: false },
-    { title: 'Folder 4', id: 4, isSelected: false },
-    { title: 'Folder 5', id: 5, isSelected: false },
-    { title: 'Folder 6', id: 6, isSelected: false },
+    {
+      title: 'Folder 1',
+      id: 1,
+      details: {
+        CustomerId01: 'CustomerId01',
+        InsuranceId01: 'InsuranceId01',
+        InsuranceNumber: '520-963321/8',
+        CompanyId: 'AXA-ALLG',
+        CompanyLong: 'Axa Allgemeine Versicherung',
+        CompanyShort: 'Axa',
+        StartDate: '2021-01-01',
+        EndDate: '2023-01-01',
+        Price: '50.43',
+        Paymethod: 'Monatlich',
+        Branch: 'Haftpflichtversicherung',
+        BranchShort: 'Haftpflicht',
+        CustomerName: 'Zak, Andreas',
+      },
+      files: [
+        {
+          name: 'file example 1.ppt',
+          fileUrl:
+            'https://www.adobe.com/support/ovation/ts/docs/ovation_test_show.ppt',
+        },
+        {
+          name: 'file example 2.ppt',
+          fileUrl:
+            'https://www.adobe.com/support/ovation/ts/docs/ovation_test_show.ppt',
+        },
+      ],
+      isSelected: false,
+    },
+    {
+      title: 'Folder 2',
+      id: 2,
+      details: {
+        CustomerId01: 'CustomerId01',
+        InsuranceId01: 'InsuranceId02',
+        InsuranceNumber: '445-44321MAX',
+        CompanyId: 'PHOES-ALLG',
+        CompanyLong: 'Phoenix Schutzgemeinschaft',
+        CompanyShort: 'Phoenix',
+        StartDate: '2020-06-01',
+        EndDate: '2023-06-01',
+        Price: '421.35',
+        Paymethod: 'J&auml;hrlich',
+        Branch: 'Unfallversicherung',
+        BranchShort: 'Unfall',
+        CustomerName: 'Zak, Andreas',
+      },
+      files: [
+      ],
+      isSelected: false,
+    },
   ];
   masternavTitle: string = 'Insurance Folders';
 

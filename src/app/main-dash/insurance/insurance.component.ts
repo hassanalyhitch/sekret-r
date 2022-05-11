@@ -10,9 +10,28 @@ import { Subscription } from 'rxjs';
 export class InsuranceComponent implements OnInit {
   contentSelected: boolean = false;
   selectedFolder: {
-    title: string;
-    id: number;
-    isSelected: boolean;
+    title: string,
+    id: number,
+    details:{
+      CustomerId01:string,
+      InsuranceId01:string,
+      InsuranceNumber:string,
+      CompanyId:string,
+      CompanyLong:string,
+      CompanyShort:string,
+      StartDate:string,
+      EndDate:string,
+      Price:string,
+      Paymethod:string,
+      Branch:string,
+      BranchShort:string,
+      CustomerName:string
+    },
+    files:{
+      name:string,
+      fileUrl:string
+    }[],
+    isSelected: boolean,
   };
   onActiveFolder:boolean;
   constructor() {}

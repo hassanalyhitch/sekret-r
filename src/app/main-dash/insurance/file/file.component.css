@@ -1,0 +1,9 @@
+.file-icon{
+  width: max-content;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-timing-function: cubic-bezier(0.76, 0.03, 0.68, 1.06);
+}
+.file-icon:hover{
+  transform: scale(1.2);
+}

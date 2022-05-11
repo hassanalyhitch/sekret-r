@@ -7,10 +7,29 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DetailComponentComponent implements OnInit {
 
-  @Input() folder: {
-    title: string;
-    id: number;
-    isSelected: boolean;
+  @Input() folder:{
+    title: string,
+    id: number,
+    details:{
+      CustomerId01:string,
+      InsuranceId01:string,
+      InsuranceNumber:string,
+      CompanyId:string,
+      CompanyLong:string,
+      CompanyShort:string,
+      StartDate:string,
+      EndDate:string,
+      Price:string,
+      Paymethod:string,
+      Branch:string,
+      BranchShort:string,
+      CustomerName:string
+    },
+    files:{
+      name:string,
+      fileUrl:string
+    }[],
+    isSelected: boolean,
   };
   @Input() onActiveFolder: boolean;
   constructor() { }

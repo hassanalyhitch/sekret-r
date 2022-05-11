@@ -23,6 +23,7 @@ import { InboxMasterNavComponent } from './main-dash/inbox/inbox-master-nav/inbo
 import { ChatComponent } from './main-dash/inbox/chat/chat.component';
 import { InsuranceBottomsheetComponent } from './main-dash/insurance/insurance-bottomsheet/insurance-bottomsheet.component';
 import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
+import { FileComponent } from './main-dash/insurance/file/file.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'insurance', pathMatch: 'full' },
@@ -71,7 +72,8 @@ const appRoutes: Routes = [
     InboxMasterNavComponent,
     ChatComponent,
     InsuranceBottomsheetComponent,
-    MobileNavComponent
+    MobileNavComponent,
+    FileComponent,
   ],
   bootstrap: [AppComponent],
 })
