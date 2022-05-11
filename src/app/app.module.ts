@@ -24,6 +24,7 @@ import { ChatComponent } from './main-dash/inbox/chat/chat.component';
 import { InsuranceBottomsheetComponent } from './main-dash/insurance/insurance-bottomsheet/insurance-bottomsheet.component';
 import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
 import { FileComponent } from './main-dash/insurance/file/file.component';
+import { FileviewComponent } from './main-dash/insurance/fileview/fileview.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'insurance', pathMatch: 'full' },
@@ -74,6 +75,7 @@ const appRoutes: Routes = [
     InsuranceBottomsheetComponent,
     MobileNavComponent,
     FileComponent,
+    FileviewComponent
   ],
   bootstrap: [AppComponent],
 })
