@@ -60,14 +60,14 @@ export class MasterNavComponent implements OnInit {
       },
       files: [
         {
-          name: 'file example 1.ppt',
+          name: 'ppt sample file.ppt',
           fileUrl:
             'https://www.adobe.com/support/ovation/ts/docs/ovation_test_show.ppt',
         },
         {
-          name: 'file example 2.ppt',
+          name: 'xls sample file.xls',
           fileUrl:
-            'https://www.adobe.com/support/ovation/ts/docs/ovation_test_show.ppt',
+            'https://dornsife.usc.edu/assets/sites/298/docs/ir211wk12sample.xls',
         },
       ],
       isSelected: false,
