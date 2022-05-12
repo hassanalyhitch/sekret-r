@@ -16,7 +16,7 @@ export class FileviewComponent implements OnInit {
   };
   fileurl:string = "https://docs.google.com/gview?&embedded=true&url=";
   safeUrl:SafeResourceUrl ;
-
+  previewLoaded:boolean = false;
   constructor(@Inject(MAT_DIALOG_DATA)public data:any, private sanitizer:DomSanitizer) { 
     this.dataObj = JSON.parse(this.data);
     
@@ -27,6 +27,10 @@ export class FileviewComponent implements OnInit {
   }
 
   ngOnInit() {
+    document.getElementById('embedView').addEventListener("load",()=>{
+      this.previewLoaded = true;
+    },false);
   }
+
 
 }

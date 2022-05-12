@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 
+
 import { LoginScreenComponent } from './login-screen/login-screen.component';
 import { MainDashComponent } from './main-dash/main-dash.component';
 import { DesktopNavComponent } from './desktop-nav/desktop-nav.component';
@@ -29,6 +30,7 @@ import { InsuranceBottomsheetComponent } from './main-dash/insurance/insurance-b
 import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
 import { FileComponent } from './main-dash/insurance/file/file.component';
 import { FileviewComponent } from './main-dash/insurance/fileview/fileview.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'insurance', pathMatch: 'full' },
@@ -60,6 +62,7 @@ const appRoutes: Routes = [
     MatInputModule,
     MatButtonModule,
     MatDialogModule,
+    MatProgressSpinnerModule,
     RouterModule.forRoot(appRoutes),
   ],
   declarations: [
