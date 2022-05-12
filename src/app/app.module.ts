@@ -6,6 +6,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+
 import { LoginScreenComponent } from './login-screen/login-screen.component';
 import { MainDashComponent } from './main-dash/main-dash.component';
 import { DesktopNavComponent } from './desktop-nav/desktop-nav.component';
@@ -54,6 +58,8 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatButtonModule,
+    MatDialogModule,
     RouterModule.forRoot(appRoutes),
   ],
   declarations: [

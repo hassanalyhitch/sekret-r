@@ -19,11 +19,13 @@ export class FileComponent implements OnInit {
 
   openModal() {
     const dialogConfig = new MatDialogConfig();
+    let passdata:string = "{fileName: '"+this.file.name+"'}";
     // The user can't close the dialog by clicking outside its body
-    dialogConfig.disableClose = true;
+    dialogConfig.disableClose = false;
     dialogConfig.id = 'modal-component';
-    dialogConfig.height = '350px';
-    dialogConfig.width = '600px';
+    dialogConfig.height = '75%';
+    dialogConfig.width = '90%';
+    dialogConfig.data = passdata;
     // https://material.angular.io/components/dialog/overview
     const modalDialog = this.matDialog.open(FileviewComponent, dialogConfig);
   }

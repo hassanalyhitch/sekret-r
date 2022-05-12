@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-fileview',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FileviewComponent implements OnInit {
 
-  constructor() { }
+  fileName:string;
+  constructor(@Inject(MAT_DIALOG_DATA)public data:any) { 
+    this.fileName = data.fileName;
+  }
 
   ngOnInit() {
   }
