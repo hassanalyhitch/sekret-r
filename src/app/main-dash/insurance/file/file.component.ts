@@ -19,7 +19,7 @@ export class FileComponent implements OnInit {
 
   openModal() {
     const dialogConfig = new MatDialogConfig();
-    let passdata:string = "{fileName: '"+this.file.name+"'}";
+    let passdata:string = '{"fileName": "'+this.file.name+'"}';
     // The user can't close the dialog by clicking outside its body
     dialogConfig.disableClose = false;
     dialogConfig.id = 'modal-component';

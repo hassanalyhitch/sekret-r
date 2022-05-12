@@ -9,8 +9,13 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 export class FileviewComponent implements OnInit {
 
   fileName:string;
+  dataObj:{
+    fileName:string,
+  };
   constructor(@Inject(MAT_DIALOG_DATA)public data:any) { 
-    this.fileName = data.fileName;
+    this.dataObj = JSON.parse(this.data);
+    
+    this.fileName = this.dataObj.fileName;
   }
 
   ngOnInit() {
