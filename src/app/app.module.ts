@@ -31,6 +31,7 @@ import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
 import { FileComponent } from './main-dash/insurance/file/file.component';
 import { FileviewComponent } from './main-dash/insurance/fileview/fileview.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { ChangeFoldernameComponent } from './main-dash/insurance/change-foldername/change-foldername.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'insurance', pathMatch: 'full' },
@@ -84,7 +85,8 @@ const appRoutes: Routes = [
     InsuranceBottomsheetComponent,
     MobileNavComponent,
     FileComponent,
-    FileviewComponent
+    FileviewComponent,
+    ChangeFoldernameComponent
   ],
   bootstrap: [AppComponent],
 })
