@@ -8,43 +8,46 @@
       Change folder name
     </span>
   </div>
-  <div class="p-3 m-3 d-flex flex-wrap detail-container">
-    <div class="col-lg-6 d-flex flex-column p-2">
-      <span class="detail-title">Customer Name</span>
-      <span class="detail-value">{{folder.details.CustomerName }} </span>
-    </div>
-    <div class="col-lg-3 col-xs-12 d-flex flex-column p-2">
-      <span class="detail-title">Start Date</span>
-      <span class="detail-value">{{folder.details.StartDate }} </span>
-    </div>
-    <div class="col-lg-3 col-xs-12 d-flex flex-column p-2">
-      <span class="detail-title">End Date</span>
-      <span class="detail-value">{{folder.details.EndDate }} </span>
-    </div>
-    <div class="col-lg-8 d-flex flex-column p-2">
-      <span class="detail-title">Insurance Number</span>
-      <span class="detail-value">{{folder.details.InsuranceNumber }} </span>
-    </div>
-    <div class="col-lg-8 d-flex flex-column p-2">
-      <span class="detail-title">Company Name</span>
-      <span class="detail-value">{{folder.details.CompanyLong }} </span>
-    </div>
-    <div class="col-lg-8 d-flex flex-column p-2">
-      <span class="detail-title">Company Branch</span>
-      <span class="detail-value">{{folder.details.Branch }} </span>
-    </div>
-    <div class="col-lg-6 d-flex flex-column p-2">
-      <span class="detail-title">Payment method</span>
-      <span class="detail-value" [innerHTML]="folder.details.Paymethod"></span>
-    </div>
-    <div class="col-lg-3 col-xs-12 d-flex flex-column p-2">
-      <span class="detail-title">Price</span>
-      <span class="detail-value">{{folder.details.Price }} </span>
-    </div>
-  </div>
+  <div class="detail-container-wrapper d-flex flex-column pb-3 bg-white ">
 
-  <hr class="m-3"/>
-  <div class="d-flex flex-wrap p-3">
-    <app-file *ngFor="let file of folder.files" [file]="file" ></app-file>
+    <div class="p-3 m-3 d-flex flex-wrap detail-container bg-white">
+      <div class="col-lg-6 d-flex flex-column p-2">
+        <span class="detail-title">Customer Name</span>
+        <span class="detail-value">{{folder.details.CustomerName }} </span>
+      </div>
+      <div class="col-lg-3 col-xs-12 d-flex flex-column p-2">
+        <span class="detail-title">Start Date</span>
+        <span class="detail-value">{{folder.details.StartDate }} </span>
+      </div>
+      <div class="col-lg-3 col-xs-12 d-flex flex-column p-2">
+        <span class="detail-title">End Date</span>
+        <span class="detail-value">{{folder.details.EndDate }} </span>
+      </div>
+      <div class="col-lg-8 d-flex flex-column p-2">
+        <span class="detail-title">Insurance Number</span>
+        <span class="detail-value">{{folder.details.InsuranceNumber }} </span>
+      </div>
+      <div class="col-lg-8 d-flex flex-column p-2">
+        <span class="detail-title">Company Name</span>
+        <span class="detail-value">{{folder.details.CompanyLong }} </span>
+      </div>
+      <div class="col-lg-8 d-flex flex-column p-2">
+        <span class="detail-title">Company Branch</span>
+        <span class="detail-value">{{folder.details.Branch }} </span>
+      </div>
+      <div class="col-lg-6 d-flex flex-column p-2">
+        <span class="detail-title">Payment method</span>
+        <span class="detail-value" [innerHTML]="folder.details.Paymethod"></span>
+      </div>
+      <div class="col-lg-3 col-xs-12 d-flex flex-column p-2">
+        <span class="detail-title">Price</span>
+        <span class="detail-value">{{folder.details.Price }} </span>
+      </div>
+    </div>
+  
+    <hr class="m-3"/>
+    <div class="d-flex flex-wrap p-3">
+      <app-file *ngFor="let file of folder.files" [file]="file" ></app-file>
+    </div>
   </div>
 </div>
