@@ -42,13 +42,13 @@ export class DetailComponentComponent implements OnInit {
   
   openModal() {
     const dialogConfig = new MatDialogConfig();
-    // let passdata:string = '{"fileName": "'+this.file.name+'","fileUrl": "'+this.file.fileUrl+'"}';
+    let passdata:string = '{"folderName": "'+this.folder.title+'","folderId": "'+this.folder.id+'"}';
     // The user can't close the dialog by clicking outside its body
     dialogConfig.disableClose = false;
     dialogConfig.id = 'modal-component';
-    dialogConfig.height = '80%';
-    dialogConfig.width = '90%';
-    dialogConfig.data = "";
+    dialogConfig.height = '75%';
+    dialogConfig.width = '75%';
+    dialogConfig.data = passdata;
     // https://material.angular.io/components/dialog/overview
     const modalDialog = this.matDialog.open(ChangeFoldernameComponent, dialogConfig);
   }

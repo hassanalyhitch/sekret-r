@@ -1,3 +1,30 @@
-<p class="text-center">
-change-foldername works!
-</p>
+<div class="d-flex flex-column">
+  <div class="text-center section-header ">
+    Change folder name
+  </div>
+
+  <hr style="">
+
+  <div class=" my-1">
+  Current folder name 
+  </div>
+  <div class=" my-1 mx-3">
+    {{currentName}} 
+  </div>
+  
+  <div class=" mt-2">
+    New folder name 
+  </div>
+  
+  <div class="w-100 chat-input-container bg-white py-1 mt-3">
+    <div class="w-100 bg-white" >
+      <div class="d-flex w-100 ">
+        <div class="material-textfield">
+          <input placeholder=" " type="text" [(ngModel)]="newFolderName" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="w-100 btn btn-save"> SAVE </button>
+
+</div>

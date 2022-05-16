@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-change-foldername',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChangeFoldernameComponent implements OnInit {
 
-  constructor() { }
+  currentName:string ;
+  newFolderName:string ;
+  dataObj:{
+    folderName:string,
+    folderid:string
+  };
+
+  constructor(@Inject(MAT_DIALOG_DATA)public data:any) {
+    
+    this.dataObj = JSON.parse(this.data);
+    this.currentName = this.dataObj.folderName;
+
+  }
 
   ngOnInit() {
   }
