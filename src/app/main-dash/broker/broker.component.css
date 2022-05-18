@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
+
+.broker-main-container{
+  font-family: 'Poppins';
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+  padding-bottom: 36px;
+  height: 90%;
+  overflow: hidden;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.banner-section{
+  background-color: #F5EFE6;
+  height: 170px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.broker-image{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: -84px;
+  margin-left: 32px;
+  background-color: white;
+}
+.detail-section{
+  height: fit-content;
+  margin-top: 90px;
+}
+.section-detail-text {
+  font-weight: 500;
+  font-size: 20px;
+  color: #1d1d1b;
+}
+.tel{
+  color: #FF611D ;
+  text-decoration: none;
+}

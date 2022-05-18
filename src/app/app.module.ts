@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 import { LoginScreenComponent } from './login-screen/login-screen.component';
@@ -64,6 +65,7 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatDialogModule,
     MatProgressSpinnerModule,
+    MatTooltipModule,
     RouterModule.forRoot(appRoutes),
   ],
   declarations: [
