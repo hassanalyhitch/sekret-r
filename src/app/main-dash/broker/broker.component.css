@@ -6,7 +6,7 @@
   border-radius: 4px;
   padding-bottom: 36px;
   height: 90%;
-  overflow: hidden;
+  overflow-y: scroll;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -37,4 +37,25 @@
 .tel{
   color: #FF611D ;
   text-decoration: none;
+}
+.email{
+  color: #FF611D ;
+  
+}
+.detail-section-1{
+  border-right:  2px solid rgba(0, 0, 0, 0.1);
+}
+.calendar{
+  color: #FF611D ;
+  cursor: pointer;
+}
+.calendar:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 425px) {
+
+  .detail-section-1{
+    border-right: none;
+  }
 }
