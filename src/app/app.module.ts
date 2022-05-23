@@ -33,6 +33,8 @@ import { FileComponent } from './main-dash/insurance/file/file.component';
 import { FileviewComponent } from './main-dash/insurance/fileview/fileview.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { ChangeFoldernameComponent } from './main-dash/insurance/change-foldername/change-foldername.component';
+import { NotificationsComponent } from './main-dash/inbox/notifications/notifications.component';
+import { ReportComponent } from './main-dash/inbox/report/report.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'insurance', pathMatch: 'full' },
@@ -47,7 +49,11 @@ const appRoutes: Routes = [
   {
     path: 'inbox',
     component: InboxComponent,
-    children: [{ path: 'chat', component: ChatComponent }],
+    children: [
+      { path: 'chat', component: ChatComponent },
+      { path: 'notifications', component: NotificationsComponent },
+      { path: 'report', component: ReportComponent },
+    ],
   },
   { path: 'broker', component: BrokerComponent },
   { path: 'profile', component: ProfileComponent },
@@ -88,7 +94,9 @@ const appRoutes: Routes = [
     MobileNavComponent,
     FileComponent,
     FileviewComponent,
-    ChangeFoldernameComponent
+    ChangeFoldernameComponent,
+    NotificationsComponent,
+    ReportComponent
   ],
   bootstrap: [AppComponent],
 })
