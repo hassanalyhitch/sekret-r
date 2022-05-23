@@ -14,6 +14,7 @@
     "@angular/platform-browser-dynamic": "^13.2.6",
     "@angular/router": "^13.2.6",
     "bootstrap": "4",
+    "hatool": "latest",
     "jquery": "1.9.1 - 3",
     "popper.js": "^1.16.1",
     "rxjs": "^7.5.5",

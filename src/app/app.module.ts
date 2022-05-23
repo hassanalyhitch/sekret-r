@@ -35,6 +35,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { ChangeFoldernameComponent } from './main-dash/insurance/change-foldername/change-foldername.component';
 import { NotificationsComponent } from './main-dash/inbox/notifications/notifications.component';
 import { ReportComponent } from './main-dash/inbox/report/report.component';
+import { HatoolLibModule } from 'hatool';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'insurance', pathMatch: 'full' },
@@ -72,6 +73,7 @@ const appRoutes: Routes = [
     MatDialogModule,
     MatProgressSpinnerModule,
     MatTooltipModule,
+    HatoolLibModule,
     RouterModule.forRoot(appRoutes),
   ],
   declarations: [
