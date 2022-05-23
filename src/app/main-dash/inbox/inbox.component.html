@@ -1,5 +1,5 @@
 <div class="h-100 col-xs-12 d-flex">
-  <div class="col-md-4 col-lg-3" [ngClass]="{ 'list-container': navSelected }">
+  <div class=" col-xs-12 col-md-4 col-lg-3" [ngClass]="{ 'list-container': navSelected }">
     <!-- selected nav component  -->
     <inbox-master-nav
       (navSelect)="onNavSelected($event)"
@@ -8,9 +8,11 @@
   </div>
 
   <div
-    class="justify-content-center col-xs-12 col-md-8 col-lg-9 pl-2"
+    class="justify-content-center col-xs-12 col-md-8 col-lg-9 pl-2 "
+    [ngClass]="{ 'detail-container-shown': !navSelected }"
   >
     <app-chat *ngIf="!navSelected"></app-chat>
-    <router-outlet></router-outlet>
+    <router-outlet ></router-outlet>
+
   </div>
 </div>

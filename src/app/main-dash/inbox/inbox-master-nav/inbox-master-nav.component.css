@@ -67,7 +67,7 @@
   background: #009ee2;
   border-radius: 8px;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
   .current-master-nav {
     height: 100vh !important;
     max-height: 75% !important;
