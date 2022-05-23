@@ -31,7 +31,7 @@
   </div>
   <div class="col-xs-12 d-block flex-wrap" *ngIf="true">
       <ul class="list-group w-100 ">
-        <li class="list-group-item d-flex align-items-center non-active">
+        <li class="list-group-item d-flex align-items-center non-active" (click)="onSelect('notification')" >
             <i class="material-icons mr-3">notifications</i>
             <span class="align-self-center "> You have 0 notifications </span>
         </li> 
@@ -44,7 +44,7 @@
   </div>
   <div class="col-xs-12 d-block flex-wrap" *ngIf="true">
       <ul class="list-group w-100 ">
-        <li class="list-group-item non-active">
+        <li class="list-group-item non-active" (click)="onSelect('report')" >
           Notification of Claim 
         </li> 
       </ul>

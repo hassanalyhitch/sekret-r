@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class InboxComponent implements OnInit {
 
   navSelected:boolean = false;
+  currentRoute:string ='chat';
 
   constructor() { }
 
@@ -15,7 +16,8 @@ export class InboxComponent implements OnInit {
   }
 
   onNavSelected(nav:string){
-    this.navSelected = true;
+    this.currentRoute = nav;
+      this.navSelected = true;
   }
 
 }

@@ -11,16 +11,19 @@ export class InboxMasterNavComponent implements OnInit {
 
   constructor(private router:Router) { }
   @Output() navSelect = new EventEmitter<string>();
-  @Output() reset = new EventEmitter<string>();
+  @Output() reset = new EventEmitter<boolean>();
   routeListener: Subscription;
 
   ngOnInit() {
     this.routeListener = this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
-        if (event.url === "/inbox" ) {
-          console.log(event.url);
-          this.reset.emit("true");
-        } 
+        if (event.url !== "/inbox" ) {
+          this.reset.emit(true);
+          console.log('should reset');
+        } else {
+          
+          this.reset.emit(false);
+        }
       }
     });
   }
