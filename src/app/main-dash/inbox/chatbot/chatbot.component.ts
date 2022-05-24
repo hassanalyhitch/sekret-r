@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ContentManager, ScriptRunnerImpl } from 'hatool';
+import { mergeMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-chatbot',
@@ -18,11 +19,17 @@ export class ChatbotComponent implements OnInit {
     const runner = new ScriptRunnerImpl(this.http, this.content, 'en');
     
     runner.debug = true;
-    runner.timeout = 500;
+    // runner.timeout = 500;
     runner.run(
       'assets/maxpool-bot-script.json',
-       0,
-      {},
+      0,
+      {
+        get_chuck: async () => {
+          return this.http.get('https://api.chucknorris.io/jokes/random/').pipe(
+            mergeMap((joke: any) => joke.value),
+          );
+        }
+      },
       (key, value) => { console.log('SETTING', key, '<==', value); },
       {},
     ).subscribe(() => { console.log('done!'); });
