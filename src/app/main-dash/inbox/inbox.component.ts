@@ -27,10 +27,13 @@ export class InboxComponent implements OnInit {
 
   }
   onReset(reset:boolean){
-    this.currentRoute = 'inbox';
-    console.log(this.currentRoute);
-    this.showNav = true;
-    this.mobileToggle = false;
-    this.showDefault = true;
+    if(reset){
+      this.currentRoute = 'inbox';
+      console.log('onReset '+this.currentRoute);
+      this.showNav = true;
+      this.mobileToggle = false;
+      this.showDefault = true;
+
+    }
   }
 }
