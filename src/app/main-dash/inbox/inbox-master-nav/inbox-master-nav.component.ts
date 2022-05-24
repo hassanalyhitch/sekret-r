@@ -32,8 +32,10 @@ export class InboxMasterNavComponent implements OnInit {
     this.navSelect.emit(nav);
     if(nav === 'chat')
       this.router.navigate(['inbox/chat']);
-    else if(nav === 'notification')
-      this.router.navigate(['inbox/notifications']);
+      else if(nav === 'chatbot')
+        this.router.navigate(['inbox/maxpool_bot']);
+        else if(nav === 'notification')
+          this.router.navigate(['inbox/notifications']);
     else if(nav === 'report')
       this.router.navigate(['inbox/report']);
 

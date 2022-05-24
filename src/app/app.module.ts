@@ -36,6 +36,7 @@ import { ChangeFoldernameComponent } from './main-dash/insurance/change-folderna
 import { NotificationsComponent } from './main-dash/inbox/notifications/notifications.component';
 import { ReportComponent } from './main-dash/inbox/report/report.component';
 import { HatoolLibModule } from 'hatool';
+import { ChatbotComponent } from './main-dash/inbox/chatbot/chatbot.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'insurance', pathMatch: 'full' },
@@ -52,6 +53,7 @@ const appRoutes: Routes = [
     component: InboxComponent,
     children: [
       { path: 'chat', component: ChatComponent },
+      { path: 'maxpool_bot', component: ChatbotComponent },
       { path: 'notifications', component: NotificationsComponent },
       { path: 'report', component: ReportComponent },
     ],
@@ -98,7 +100,8 @@ const appRoutes: Routes = [
     FileviewComponent,
     ChangeFoldernameComponent,
     NotificationsComponent,
-    ReportComponent
+    ReportComponent,
+    ChatbotComponent
   ],
   bootstrap: [AppComponent],
 })
