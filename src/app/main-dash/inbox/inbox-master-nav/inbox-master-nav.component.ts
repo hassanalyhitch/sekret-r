@@ -18,11 +18,11 @@ export class InboxMasterNavComponent implements OnInit {
     this.routeListener = this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
         if (event.url !== "/inbox" ) {
-          this.reset.emit(true);
-          console.log('should reset');
+          this.reset.emit(false);
         } else {
           
-          this.reset.emit(false);
+          this.reset.emit(true);
+          console.log(event.url);
         }
       }
     });

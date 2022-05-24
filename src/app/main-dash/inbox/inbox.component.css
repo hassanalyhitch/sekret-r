@@ -5,4 +5,7 @@
   .list-container{
     display: none;
   }
+  .show-inbox-default{
+    display: none;
+  }
 }

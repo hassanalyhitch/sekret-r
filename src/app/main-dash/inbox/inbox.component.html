@@ -1,17 +1,23 @@
 <div class="h-100 col-xs-12 d-flex">
-  <div class=" col-xs-12 col-md-4 col-lg-3" [ngClass]="{ 'list-container': navSelected }">
+  <div class=" col-xs-12 col-md-4 col-lg-3" [ngClass]="{ 'list-container': mobileToggle }">
     <!-- selected nav component  -->
     <inbox-master-nav
       (navSelect)="onNavSelected($event)"
-      (reset)="navSelected = $event;"
+      (reset)="onReset(true)"
     ></inbox-master-nav>
   </div>
 
   <div
     class="justify-content-center col-xs-12 col-md-8 col-lg-9 pl-2 "
-    [ngClass]="{ 'detail-container-shown': !navSelected }"
+    *ngIf = "showDefault"
+    [ngClass]="{ 'detail-container-shown': !mobileToggle }">
+      <app-chat ></app-chat>
+  </div>
+  <div
+    class="justify-content-center col-xs-12 col-md-8 col-lg-9 pl-2 "
+    *ngIf = "!showDefault"
+    [ngClass]="{ 'detail-container-shown': !mobileToggle }"
   >
-    <app-chat *ngIf="!navSelected"></app-chat>
     <router-outlet ></router-outlet>
 
   </div>

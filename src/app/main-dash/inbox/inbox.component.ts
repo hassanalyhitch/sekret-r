@@ -7,17 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InboxComponent implements OnInit {
 
-  navSelected:boolean = false;
-  currentRoute:string ='chat';
+  showNav:boolean = true;
+  mobileToggle:boolean;
+  showDefault:boolean = true;
+  currentRoute:string ='inbox';
 
   constructor() { }
 
   ngOnInit() {
+    this.mobileToggle = false;
   }
 
   onNavSelected(nav:string){
+    console.log(nav);
     this.currentRoute = nav;
-      this.navSelected = true;
-  }
+      this.mobileToggle = true;
+      this.showNav = false;
+      this.showDefault = false;
 
+  }
+  onReset(reset:boolean){
+    this.currentRoute = 'inbox';
+    console.log(this.currentRoute);
+    this.showNav = true;
+    this.mobileToggle = false;
+    this.showDefault = true;
+  }
 }
