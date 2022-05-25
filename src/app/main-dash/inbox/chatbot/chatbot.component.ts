@@ -24,8 +24,18 @@ export class ChatbotComponent implements OnInit {
     //     cls: ''
     //   }
     // ]);
+    // add to script
+    // {
+    //   "say": "One more thing... here is a custom chat component (click it to proceed)",
+    //   "uid": "d2aa660ae3"
+    // },
+    // {
+    //   "img": "assets/logo.svg",
+    //   "uid": "e658298469"
+    // }
+
     runner.debug = true;
-    runner.timeout = 400;
+    runner.timeout = 500;
     runner.run(
       'assets/maxpool-bot-script.json',
       0,

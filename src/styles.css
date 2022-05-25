@@ -54,7 +54,7 @@ htl-hatool htl-chatbox htl-messages .container htl-message-to {
   justify-content: flex-start;
 }
 htl-hatool htl-chatbox htl-messages .container htl-message-to .speech-bubble {
-  background-color: #FF611D ;
+  background-color: #ffffff ;
   text-align: left;
 }
 htl-hatool htl-chatbox htl-messages .container htl-message-to:nth-last-of-type(1) .speech-bubble::before {
@@ -65,7 +65,7 @@ htl-hatool htl-chatbox htl-messages .container htl-message-to:nth-last-of-type(1
   left: -7px;
   height: 20px;
   width: 20px;
-  background: #FF611D ;
+  background: #ffffff ;
   border-bottom-right-radius: 15px;
 }
 htl-hatool htl-chatbox htl-messages .container htl-message-to:nth-last-of-type(1) .speech-bubble:after {
@@ -87,7 +87,7 @@ htl-hatool htl-chatbox htl-messages .container htl-message-from p {
   color: white;
 }
 htl-hatool htl-chatbox htl-messages .container htl-message-from .speech-bubble {
-  background: #0078fe;
+  background: #009EE2 ;
 }
 htl-hatool htl-chatbox htl-messages .container htl-message-from:nth-last-of-type(1) .speech-bubble::before {
   content: "";
@@ -97,7 +97,7 @@ htl-hatool htl-chatbox htl-messages .container htl-message-from:nth-last-of-type
   right: -8px;
   height: 20px;
   width: 20px;
-  background: #0078fe;
+  background: #009EE2 ;
   border-bottom-left-radius: 15px;
 }
 htl-hatool htl-chatbox htl-messages .container htl-message-from:nth-last-of-type(1) .speech-bubble:after {
@@ -112,8 +112,8 @@ htl-hatool htl-chatbox htl-messages .container htl-message-from:nth-last-of-type
   border-bottom-left-radius: 10px;
 }
 htl-hatool htl-chatbox htl-messages .container htl-message-options button, htl-hatool htl-chatbox htl-messages .container htl-message-multi-options button {
-  background: #0078fe;
-  border: 1px solid #004898;
+  background: #009EE2 ;
+  border: 1px solid #2774AE ;
   min-width: 30%;
   border-radius: 20px;
   padding: 8px 15px;
@@ -149,7 +149,15 @@ htl-hatool htl-chatbox htl-input:not(.enabled) {
   padding: 0;
 }
 htl-hatool htl-chatbox htl-input input, htl-hatool htl-chatbox htl-input textarea {
-  font-size: 20px;
+  
+  font-size: 1rem;
+  outline: none;
+  border: 0.15em solid #575756;
+  border-radius: 5px;
+  padding: 1rem 0.7rem;
+  width: 100%;
+  color: #575756;
+  background-color: white;
 }
 htl-hatool htl-chatbox htl-input .textarea {
   border-radius: 5px;
@@ -163,4 +171,19 @@ htl-hatool htl-chatbox htl-input .textarea button {
 }
 htl-hatool htl-chatbox htl-input .textarea textarea {
   border-radius: 5px;
+}
+.input button {
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+  margin-left: 8px;
+  margin-right: 4px;
+  background-color: #FF611D ;
+  border-radius: 4px;
+  display: block;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px rgba(51, 51, 51, 0.4);
+  transition: 0.3s ease-out;
 }
