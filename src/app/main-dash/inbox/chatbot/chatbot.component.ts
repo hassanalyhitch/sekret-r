@@ -18,9 +18,14 @@ export class ChatbotComponent implements OnInit {
   ngOnInit() {
     
     const runner = new ScriptRunnerImpl(this.http, this.content, 'en');
-    
+    // runner.registerCustomComponents([
+    //   {
+    //     keyword: 'img',
+    //     cls: ''
+    //   }
+    // ]);
     runner.debug = true;
-    // runner.timeout = 500;
+    runner.timeout = 400;
     runner.run(
       'assets/maxpool-bot-script.json',
       0,

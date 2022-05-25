@@ -90,7 +90,7 @@
             },
             {
               "say": "Thanks, before I go, here's a random Chuck Norris Joke",
-              "uid": "c182f6d263"
+              "uid": "c182f6d264"
             },
             {
               "do": {
@@ -102,14 +102,6 @@
             {
               "say": "\"{{joke}}\"",
               "uid": "be7f675965"
-            },
-            {
-              "say": "One more thing... here is a custom chat component (click it to proceed)",
-              "uid": "d2aa660ae3"
-            },
-            {
-              "img": "assets/logo.svg",
-              "uid": "e658298469"
             },
             {
               "say": "Goodbye for now!",
@@ -144,6 +136,14 @@
                 ],
                 "variable": "symptoms"
               }
+            },
+            {
+              "say": "One more thing... here is a custom chat component (click it to proceed)",
+              "uid": "d2aa660ae3"
+            },
+            {
+              "img": "assets/logo.svg",
+              "uid": "e658298469"
             }
           ],
           "uid": "f619591d05"
