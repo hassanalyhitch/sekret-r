@@ -31,11 +31,11 @@
               "wait": {
                 "options": [
                   {
-                    "show": "pretty okay",
+                    "show": "very much okay",
                     "value": "good"
                   },
                   {
-                    "show": "not so much",
+                    "show": "not so good",
                     "steps": [
                       {
                         "say": "Oh no, that's too bad!",
