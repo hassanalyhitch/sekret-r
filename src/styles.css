@@ -25,6 +25,7 @@ htl-hatool htl-chatbox {
   font-family: 'Poppins';
   margin-left: 0em;
   background-color: rgba(235, 235, 235, 1);
+  overflow-y: scroll;
   height: 90% !important;
   max-height: 90% !important;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
