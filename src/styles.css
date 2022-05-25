@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
 html,
 body {
-  background-color: #EBEBEB; /*#e6ecf5; rgba(255, 250, 237, 1);*/
+  background-color: #ebebeb; /*#e6ecf5; rgba(255, 250, 237, 1);*/
   min-height: 100%;
 }
 ::-webkit-scrollbar {
@@ -54,22 +54,32 @@ htl-hatool htl-chatbox htl-messages .container htl-message-to {
   justify-content: flex-start;
 }
 htl-hatool htl-chatbox htl-messages .container htl-message-to .speech-bubble {
-  background-color: #ffffff ;
+  background-color: #ffffff;
   text-align: left;
 }
-htl-hatool htl-chatbox htl-messages .container htl-message-to:nth-last-of-type(1) .speech-bubble::before {
-  content: "";
+htl-hatool
+  htl-chatbox
+  htl-messages
+  .container
+  htl-message-to:nth-last-of-type(1)
+  .speech-bubble::before {
+  content: '';
   position: absolute;
   z-index: 0;
   bottom: 0;
   left: -7px;
   height: 20px;
   width: 20px;
-  background: #ffffff ;
+  background: #ffffff;
   border-bottom-right-radius: 15px;
 }
-htl-hatool htl-chatbox htl-messages .container htl-message-to:nth-last-of-type(1) .speech-bubble:after {
-  content: "";
+htl-hatool
+  htl-chatbox
+  htl-messages
+  .container
+  htl-message-to:nth-last-of-type(1)
+  .speech-bubble:after {
+  content: '';
   position: absolute;
   z-index: 1;
   bottom: 0;
@@ -87,21 +97,31 @@ htl-hatool htl-chatbox htl-messages .container htl-message-from p {
   color: white;
 }
 htl-hatool htl-chatbox htl-messages .container htl-message-from .speech-bubble {
-  background: #009EE2 ;
+  background: #009ee2;
 }
-htl-hatool htl-chatbox htl-messages .container htl-message-from:nth-last-of-type(1) .speech-bubble::before {
-  content: "";
+htl-hatool
+  htl-chatbox
+  htl-messages
+  .container
+  htl-message-from:nth-last-of-type(1)
+  .speech-bubble::before {
+  content: '';
   position: absolute;
   z-index: 0;
   bottom: 0;
   right: -8px;
   height: 20px;
   width: 20px;
-  background: #009EE2 ;
+  background: #009ee2;
   border-bottom-left-radius: 15px;
 }
-htl-hatool htl-chatbox htl-messages .container htl-message-from:nth-last-of-type(1) .speech-bubble:after {
-  content: "";
+htl-hatool
+  htl-chatbox
+  htl-messages
+  .container
+  htl-message-from:nth-last-of-type(1)
+  .speech-bubble:after {
+  content: '';
   position: absolute;
   z-index: 1;
   bottom: 0;
@@ -111,9 +131,15 @@ htl-hatool htl-chatbox htl-messages .container htl-message-from:nth-last-of-type
   background: rgba(235, 235, 235, 1);
   border-bottom-left-radius: 10px;
 }
-htl-hatool htl-chatbox htl-messages .container htl-message-options button, htl-hatool htl-chatbox htl-messages .container htl-message-multi-options button {
-  background: #009EE2 ;
-  border: 1px solid #2774AE ;
+htl-hatool htl-chatbox htl-messages .container htl-message-options button,
+htl-hatool
+  htl-chatbox
+  htl-messages
+  .container
+  htl-message-multi-options
+  button {
+  background: #009ee2;
+  border: 1px solid #2774ae;
   min-width: 30%;
   border-radius: 20px;
   padding: 8px 15px;
@@ -122,22 +148,49 @@ htl-hatool htl-chatbox htl-messages .container htl-message-options button, htl-h
   color: white;
   cursor: pointer;
 }
-htl-hatool htl-chatbox htl-messages .container htl-message-options button.selected, htl-hatool htl-chatbox htl-messages .container htl-message-multi-options button.selected {
+htl-hatool
+  htl-chatbox
+  htl-messages
+  .container
+  htl-message-options
+  button.selected,
+htl-hatool
+  htl-chatbox
+  htl-messages
+  .container
+  htl-message-multi-options
+  button.selected {
   border-width: 4px;
   padding: 5px 12px;
 }
-htl-hatool htl-chatbox htl-messages .container htl-message-options button.selected:not(.echo), htl-hatool htl-chatbox htl-messages .container htl-message-multi-options button.selected:not(.echo) {
+htl-hatool
+  htl-chatbox
+  htl-messages
+  .container
+  htl-message-options
+  button.selected:not(.echo),
+htl-hatool
+  htl-chatbox
+  htl-messages
+  .container
+  htl-message-multi-options
+  button.selected:not(.echo) {
   display: none;
 }
 htl-hatool htl-chatbox htl-messages .container htl-message-uploader .button {
-  background: #eee;
-  border: 1px solid #bbbbbb;
-  width: 70%;
-  border-radius: 20px;
-  padding: 8px 15px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+  margin-left: 8px;
+  margin-right: 4px;
+  background-color: #ff611d;
+  border-radius: 4px;
+  display: block;
+  color: #fff;
+  text-align: center;
   cursor: pointer;
+  box-shadow: 1px 1px 4px rgba(51, 51, 51, 0.4);
+  transition: 0.3s ease-out;
 }
 htl-hatool htl-chatbox htl-input {
   border: none;
@@ -148,8 +201,8 @@ htl-hatool htl-chatbox htl-input:not(.enabled) {
   line-height: 0px;
   padding: 0;
 }
-htl-hatool htl-chatbox htl-input input, htl-hatool htl-chatbox htl-input textarea {
-  
+htl-hatool htl-chatbox htl-input input,
+htl-hatool htl-chatbox htl-input textarea {
   font-size: 1rem;
   outline: none;
   border: 0.15em solid #575756;
@@ -163,11 +216,19 @@ htl-hatool htl-chatbox htl-input .textarea {
   border-radius: 5px;
 }
 htl-hatool htl-chatbox htl-input .textarea button {
-  border: 1px solid #1959d0;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+  margin-left: 8px;
+  margin-right: 4px;
+  background-color: #ff611d;
   border-radius: 4px;
-  font-size: 18px;
-  padding: 5px;
-  margin: 5px;
+  display: block;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px rgba(51, 51, 51, 0.4);
+  transition: 0.3s ease-out;
 }
 htl-hatool htl-chatbox htl-input .textarea textarea {
   border-radius: 5px;
@@ -178,7 +239,7 @@ htl-hatool htl-chatbox htl-input .textarea textarea {
   padding: 1rem;
   margin-left: 8px;
   margin-right: 4px;
-  background-color: #FF611D ;
+  background-color: #ff611d;
   border-radius: 4px;
   display: block;
   color: #fff;
