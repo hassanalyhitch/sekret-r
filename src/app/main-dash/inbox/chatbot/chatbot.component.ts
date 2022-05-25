@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ContentManager, ScriptRunnerImpl } from 'hatool';
-import { mergeMap } from 'rxjs/operators';
+import { map} from 'rxjs/operators';
+import {lastValueFrom} from 'rxjs';
 
 @Component({
   selector: 'app-chatbot',
@@ -25,9 +26,10 @@ export class ChatbotComponent implements OnInit {
       0,
       {
         get_chuck: async () => {
-          return this.http.get('https://api.chucknorris.io/jokes/random/').pipe(
-            mergeMap((joke: any) => joke.value),
+          const jokeObj = this.http.get('https://api.chucknorris.io/jokes/random/').pipe(
+            map((joke: any) => joke.value),
           );
+          return await lastValueFrom(jokeObj);
         }
       },
       (key, value) => { console.log('SETTING', key, '<==', value); },
