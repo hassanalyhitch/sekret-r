@@ -12,11 +12,14 @@ export class InboxMasterNavComponent implements OnInit {
   constructor(private router:Router) { }
   @Output() navSelect = new EventEmitter<string>();
   @Output() reset = new EventEmitter<boolean>();
+  inboxNav:string ;
   routeListener: Subscription;
 
   ngOnInit() {
+    this.activateInboxNav();
     this.routeListener = this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
+        this.activateInboxNav();
         if (event.url !== "/inbox" ) {
           this.reset.emit(false);
         } else {
@@ -28,8 +31,30 @@ export class InboxMasterNavComponent implements OnInit {
     });
   }
 
+  activateInboxNav(){
+
+    switch(window.location.pathname){
+      case '/inbox/maxpool_bot': {
+        this.inboxNav = 'chatbot';
+        break;
+      }
+      case '/inbox/report': {
+        this.inboxNav = 'report';
+        break;
+      }
+      case '/inbox/notification': {
+        this.inboxNav = 'notification';
+        break;
+      }
+      default:{
+        this.inboxNav = 'chat';
+        break;       
+      }
+    }
+  }
   onSelect(nav:string){
     this.navSelect.emit(nav);
+    this.inboxNav = nav;
     if(nav === 'chat')
       this.router.navigate(['inbox/chat']);
       else if(nav === 'chatbot')

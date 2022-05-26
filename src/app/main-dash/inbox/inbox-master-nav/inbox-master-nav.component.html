@@ -13,11 +13,11 @@
     </div>
     <div class="col-xs-12 d-block flex-wrap" *ngIf="true">
         <ul class="list-group w-100">
-          <li class="list-group-item d-flex align-items-center masternav-item" (click)="onSelect('chat')" >
+          <li class="list-group-item d-flex align-items-center" (click)="onSelect('chat')" [ngClass]="{'non-active': inboxNav!='chat'}" >
               <span class="material-icons mr-3">person_pin</span>
               <span class="align-self-center "> Broker Name  </span>
           </li> 
-          <li class="list-group-item d-flex align-items-center non-active" (click)="onSelect('chatbot')">
+          <li class="list-group-item d-flex align-items-center" (click)="onSelect('chatbot')" [ngClass]="{'non-active': inboxNav!='chatbot'}">
               <span class="material-icons mr-3">adb</span>
               <span class="align-self-center "> Maxpool Bot  </span>
           </li> 
@@ -31,7 +31,7 @@
   </div>
   <div class="col-xs-12 d-block flex-wrap" *ngIf="true">
       <ul class="list-group w-100 ">
-        <li class="list-group-item d-flex align-items-center non-active" (click)="onSelect('notification')" >
+        <li class="list-group-item d-flex align-items-center" (click)="onSelect('notification')" [ngClass]="{'non-active': inboxNav!='notification'}">
             <i class="material-icons mr-3">notifications</i>
             <span class="align-self-center "> You have 0 notifications </span>
         </li> 
@@ -44,7 +44,7 @@
   </div>
   <div class="col-xs-12 d-block flex-wrap" *ngIf="true">
       <ul class="list-group w-100 ">
-        <li class="list-group-item non-active" (click)="onSelect('report')" >
+        <li class="list-group-item " (click)="onSelect('report')"  [ngClass]="{'non-active': inboxNav!='report'}">
           Notification of Claim 
         </li> 
       </ul>
