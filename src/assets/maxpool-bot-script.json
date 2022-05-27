@@ -135,6 +135,10 @@
                     "show": "House insurance"
                   },
                   {
+                    "field": "health",
+                    "show": "Health insurance"
+                  },
+                  {
                     "show": "continue"
                   }
                 ],
