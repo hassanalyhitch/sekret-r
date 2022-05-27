@@ -118,7 +118,7 @@
           "name": "insurance_types",
           "steps": [
             {
-              "say": "Please select an insurance category that applies.",
+              "say": "Please select all insurance categories that apply.",
               "uid": "7c3c01c2c0"
             },
             {
