@@ -2,13 +2,17 @@
   "s": [
     {
       "description": "This is a sample for hatool's scripting engine, used to demonstrate some of its features",
-      "name": "Sample Hatool script",
+      "name": "Sample Script",
       "snippets": [
         {
           "name": "default",
           "steps": [
             {
-              "say": "Hey! What's your name?",
+              "say": "Hey! I'm Max Bot, here to help you out.",
+              "uid": "b2adc5ee81"
+            },
+            {
+              "say": "What's your name?",
               "uid": "b2adc5ee81"
             },
             {
@@ -23,7 +27,7 @@
               "uid": "0c27f45290"
             },
             {
-              "say": "How are you feeling?",
+              "say": "How can I help you?",
               "uid": "cea0de5b2d"
             },
             {
@@ -31,37 +35,37 @@
               "wait": {
                 "options": [
                   {
-                    "show": "very much okay",
-                    "value": "good"
+                    "show": "I'm okay, just checking you out.",
+                    "value": "okay"
                   },
                   {
-                    "show": "not so good",
+                    "show": "I need insurance",
                     "steps": [
                       {
-                        "say": "Oh no, that's too bad!",
+                        "say": "Great, I'm good with that.",
                         "uid": "8cf9301dda"
                       }
                     ],
                     "uid": "9e52927ddd",
-                    "value": "bad"
+                    "value": "customer_lead"
                   }
                 ],
-                "variable": "feeling"
+                "variable": "wants"
               }
             },
             {
               "switch": {
-                "arg": "feeling",
+                "arg": "wants",
                 "cases": [
                   {
-                    "match": "bad",
+                    "match": "customer_lead",
                     "steps": [
                       {
-                        "say": "I understand that you're not feeling great",
+                        "say": "What do you want to insure?",
                         "uid": "a45667e8bc"
                       },
                       {
-                        "goto": "symptoms",
+                        "goto": "insurance_types",
                         "uid": "df29850086"
                       }
                     ],
@@ -111,10 +115,10 @@
           "uid": "25705bb5c7"
         },
         {
-          "name": "symptoms",
+          "name": "insurance_types",
           "steps": [
             {
-              "say": "Please check all symptoms that apply",
+              "say": "Please select an insurance category that applies.",
               "uid": "7c3c01c2c0"
             },
             {
@@ -123,18 +127,18 @@
                 "multi": true,
                 "options": [
                   {
-                    "field": "nausea_stomachache",
-                    "show": "nausea or stomachache"
+                    "field": "car",
+                    "show": "Car insurance"
                   },
                   {
-                    "field": "headaches",
-                    "show": "headache or migrane"
+                    "field": "house",
+                    "show": "House insurance"
                   },
                   {
                     "show": "continue"
                   }
                 ],
-                "variable": "symptoms"
+                "variable": "category"
               }
             }
           ],
