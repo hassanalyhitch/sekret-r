@@ -8,7 +8,7 @@
           "name": "default",
           "steps": [
             {
-              "say": "Hey! I'm Max Bot, here to help you out.",
+              "say": "Hi, I'm Max Bot, here to help you out.",
               "uid": "b2adc5ee81"
             },
             {
@@ -42,7 +42,7 @@
                     "show": "I need insurance",
                     "steps": [
                       {
-                        "say": "Great, I'm good with that.",
+                        "say": "Great!, I'm good with that.",
                         "uid": "8cf9301dda"
                       }
                     ],
@@ -93,7 +93,7 @@
               "uid": "5196d87f93"
             },
             {
-              "say": "Cool, before I go, here's a random Chuck Norris Joke",
+              "say": "Before I go, here's a random Chuck Norris Joke",
               "uid": "c182f6d264"
             },
             {
@@ -140,6 +140,10 @@
                 ],
                 "variable": "category"
               }
+            },
+            {
+              "say": "Thanks, one of my human friends at Maxpool will get back to you shortly.",
+              "uid": "b2adc5ee82"
             }
           ],
           "uid": "f619591d05"
