@@ -5,8 +5,9 @@
   background-color: rgba(255, 255, 255, 1);
   border-radius: 4px;
   padding-bottom: 36px;
-  height: 90%;
+  min-height: 90%;
   overflow-y: scroll;
+  overflow-x: hidden;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -57,5 +58,9 @@
 
   .detail-section-1{
     border-right: none;
+  }
+  .broker-main-container{
+    height: max-content;
+    padding-bottom: 36px;
   }
 }
