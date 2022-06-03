@@ -13,6 +13,8 @@
     "@angular/platform-browser": "^13.2.6",
     "@angular/platform-browser-dynamic": "^13.2.6",
     "@angular/router": "^13.2.6",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
     "bootstrap": "4",
     "hatool": "latest",
     "jquery": "1.9.1 - 3",

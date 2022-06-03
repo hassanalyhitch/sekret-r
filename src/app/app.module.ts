@@ -37,6 +37,11 @@ import { NotificationsComponent } from './main-dash/inbox/notifications/notifica
 import { ReportComponent } from './main-dash/inbox/report/report.component';
 import { HatoolLibModule } from 'hatool';
 import { ChatbotComponent } from './main-dash/inbox/chatbot/chatbot.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+// import ngx-translate and the http loader
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'insurance', pathMatch: 'full' },
@@ -63,6 +68,12 @@ const appRoutes: Routes = [
   { path: 'settings', component: SettingsComponent },
 ];
 
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -76,7 +87,15 @@ const appRoutes: Routes = [
     MatProgressSpinnerModule,
     MatTooltipModule,
     HatoolLibModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+    })
   ],
   declarations: [
     AppComponent,
