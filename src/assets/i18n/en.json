@@ -1,0 +1,10 @@
+{
+  "nav": {
+      "insurance": "Translation demo",
+      "inbox": "This is a simple",
+      "profile": "Translation demo",
+      "broker": "Translation demo",
+      "settings": "Translation demo",
+      "signout": "Translation demo"
+  }
+}

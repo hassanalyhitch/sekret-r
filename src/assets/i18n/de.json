@@ -1,0 +1,10 @@
+{
+  "nav": {
+      "insurance": "de insurance",
+      "inbox": "de inbox",
+      "profile": "de profile",
+      "broker": "de broker",
+      "settings": "de setting",
+      "signout": "de signout"
+  }
+}
