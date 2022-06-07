@@ -2,7 +2,7 @@
   "login":{
     "username":"Username",
     "password":"Password",
-    "stay":"Stay signed in?",
+    "stay":"Stay signed in ?",
     "signin":"Sign in"
   },
   "nav": {
