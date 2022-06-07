@@ -1,2 +1,2 @@
-<app-login-screen (auth)="authenticated = $event" *ngIf="!authenticated" ></app-login-screen>
+<app-login-screen (auth)="authenticated = $event" *ngIf="!authenticated" (lang)="setLang($event)" ></app-login-screen>
 <app-main-dash *ngIf="authenticated" ></app-main-dash>

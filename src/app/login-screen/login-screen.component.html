@@ -90,7 +90,7 @@ overflow: hidden !important;"
 
                 <div class="material-textfield mt-4">
                   <input placeholder=" " type="text" [(ngModel)]="username" />
-                  <label>Username</label>
+                  <label>{{ 'login.username' | translate }}</label>
                 </div>
                 <div class="material-textfield mt-4">
                   <input
@@ -98,18 +98,28 @@ overflow: hidden !important;"
                     type="password"
                     [(ngModel)]="password"
                   />
-                  <label>Password</label>
+                  <label>{{ 'login.password' | translate }}</label>
                 </div>
-                <div class="row mt-4 w-100 align-items-left">
-                  <label for="checkbox-signin" class="text-compliment">
-                    <input
-                      type="checkbox"
-                      id="checkbox-signin"
-                      name="checkbox-signin"
-                      style="width:36px;"
-                    />
-                    Stay signed in?
-                  </label>
+                <div class="row mt-4 w-100 ">
+                  <div class="d-flex flex-row w-100 m-auto text-compliment">
+                    <label for="checkbox-signin" >
+                      <input
+                        type="checkbox"
+                        id="checkbox-signin"
+                        name="checkbox-signin"
+                        style="width:36px;"
+                      />
+                      {{ 'login.stay' | translate }}
+                    </label>
+                    <div class="d-flex ml-auto mr-2 text-compliment align-items-center">
+                      <span class="m-2">en </span> 
+                      <label class="switch">
+                        <input type="checkbox" value='de' (change)="changeLang($event)">
+                        <span class="slider round"></span>
+                      </label>
+                      <span class="ml-2"> de</span>
+                    </div>
+                  </div>
                 </div>
                 <div class="mt-2 w-100">
                   <button
@@ -119,7 +129,7 @@ overflow: hidden !important;"
                     (click)="validateUser()"
                     style="font-size:20px;"
                   >
-                    Sign in
+                  {{ 'login.signin' | translate }}
                   </button>
                 </div>
               </div>

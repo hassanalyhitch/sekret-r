@@ -1,10 +1,17 @@
 {
+  "login":{
+    "username":"Username",
+    "password":"Password",
+    "stay":"Stay signed in?",
+    "signin":"Sign in"
+  },
   "nav": {
-      "insurance": "Translation demo",
+      "insurance": "en Insurance",
       "inbox": "This is a simple",
       "profile": "Translation demo",
       "broker": "Translation demo",
       "settings": "Translation demo",
       "signout": "Translation demo"
   }
+
 }

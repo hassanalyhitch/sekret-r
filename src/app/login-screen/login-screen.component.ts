@@ -12,6 +12,7 @@ export class LoginScreenComponent implements OnInit {
   username = '';
   password = '';
   @Output('auth') authenticated = new EventEmitter<boolean>();
+  @Output() lang = new EventEmitter<string>();
 
   constructor() {}
 
@@ -23,5 +24,12 @@ export class LoginScreenComponent implements OnInit {
     this.authenticated.emit(true);
     
     return this.authenticated;
+  }
+  changeLang(e){
+    if(e.target.checked){
+      this.lang.emit('de');
+    } else {
+      this.lang.emit('en');
+    }
   }
 }

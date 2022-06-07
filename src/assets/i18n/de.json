@@ -1,4 +1,10 @@
 {
+  "login":{
+    "username":"Benutzer",
+    "password":"Passwort",
+    "stay":"Angemeldet bleiben?",
+    "signin":"Einloggen"
+  },
   "nav": {
       "insurance": "de insurance",
       "inbox": "de inbox",
