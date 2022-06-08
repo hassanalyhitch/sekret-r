@@ -3,7 +3,10 @@
     "username":"Username",
     "password":"Password",
     "stay":"Stay signed in ?",
-    "signin":"Sign in"
+    "signin":"Sign in",
+    "header":"A new dimension in customer care.",
+    "subheader":"The brokerage future has begun.",
+    "catch-phrase":"Easy. Fast. Digital."
   },
   "nav": {
       "insurance": "en Insurance",

@@ -3,7 +3,10 @@
     "username":"Benutzer",
     "password":"Passwort",
     "stay":"Angemeldet bleiben ?",
-    "signin":"Einloggen"
+    "signin":"Einloggen",
+    "header":"Eine neue Dimension der Kundenbetreuung.",
+    "subheader":"Die Brokerage-Zukunft hat begonnen.",
+    "catch-phrase":"Einfach. Schnell. Digital."
   },
   "nav": {
       "insurance": "de insurance",
