@@ -14,7 +14,7 @@
       class="d-flex flex-column justify-content-center align-items-center pt-3"
     >
       <i class="material-icons align-self-center">message</i>
-      Inbox
+      {{ 'nav.inbox' | translate }}
     </a>
     <a
       [routerLink]="['/broker']"
@@ -22,7 +22,7 @@
       class="d-flex flex-column justify-content-center align-items-center pt-3"
     >
       <i class="material-icons align-self-center">person_pin</i>
-      My Broker
+      {{ 'nav.broker' | translate }}
     </a>
     <a
       [routerLink]="['/profile']"
@@ -30,7 +30,7 @@
       class="d-flex flex-column justify-content-center align-items-center pt-3"
     >
       <i class="material-icons align-self-center">person_outline</i>
-      My Profile
+      {{ 'nav.profile' | translate }}
     </a>
     <a
       [routerLink]="['/settings']"
@@ -38,7 +38,7 @@
       class="d-flex flex-column justify-content-center align-items-center pt-3"
     >
       <i class="material-icons align-self-center">settings</i>
-      Settings
+      {{ 'nav.settings' | translate }}
     </a>
   </div>
 
@@ -48,7 +48,7 @@
       class="d-flex flex-column justify-content-center align-items-center pb-3"
     >
       <i class="material-icons align-self-center">logout</i>
-      Sign Out
+      {{ 'nav.signout' | translate }}
     </a>
   </div>
 </div>

@@ -10,11 +10,11 @@
   },
   "nav": {
       "insurance": "Insurance",
-      "inbox": "This is a simple",
-      "profile": "Translation demo",
-      "broker": "Translation demo",
-      "settings": "Translation demo",
-      "signout": "Translation demo"
+      "inbox": "Inbox",
+      "profile": "Profile",
+      "broker": "Broker",
+      "settings": "Settings",
+      "signout": "Sign Out"
   }
 
 }
