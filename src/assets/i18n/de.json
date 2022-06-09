@@ -19,6 +19,9 @@
   "insurance": {
     "nav":{
       "title":"Versicherung Folders ᵈᵉ"
+    },
+    "detail":{
+      "changename":"Change folder name ᵈᵉ"
     }
   }
 
