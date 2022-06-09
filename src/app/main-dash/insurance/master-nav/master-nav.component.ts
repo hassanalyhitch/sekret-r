@@ -95,7 +95,7 @@ export class MasterNavComponent implements OnInit {
       isSelected: false,
     },
   ];
-  masternavTitle: string = 'Insurance Folders';
+  // masternavTitle: string = 'Insurance Folders';
 
   @Output('selection') selectedFolder = new EventEmitter<{}>();
   @Output() reset = new EventEmitter<boolean>();

@@ -15,5 +15,11 @@
       "broker": "Maklerin",
       "settings": "Einstellungen",
       "signout": "Ausloggen"
+  },
+  "insurance": {
+    "nav":{
+      "title":"Insurance Folders ᵈᵉ"
+    }
   }
+
 }
