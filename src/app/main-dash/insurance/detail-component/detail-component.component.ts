@@ -38,7 +38,7 @@ export class DetailComponentComponent implements OnInit {
   hrTitle: string;
 
   constructor(private matDialog:MatDialog, private translate:TranslateService) {
-    this.hrTitle = this.translate.instant('nav.broker');
+    this.hrTitle = this.translate.instant('insurance.detail.hrtitle');
    }
 
   ngOnInit() {
@@ -47,12 +47,6 @@ export class DetailComponentComponent implements OnInit {
 
     if (wholeDocTemplate != null) {
       document.getElementById("docu-hr").setAttribute('data-content', this.hrTitle);
-
-      var content = window.getComputedStyle(
-        document.querySelector('hr'), ':after'
-      ).getPropertyValue('content');
-
-      alert(content);
     } 
 
   }

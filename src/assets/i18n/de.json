@@ -22,7 +22,18 @@
     },
     "detail":{
       "changename":"Change folder name ᵈᵉ",
-      "hrtitle":"Documents ᵈᵉ"
+      "hrtitle":"Documents ᵈᵉ",
+      "customername":"Customer Name ᵈᵉ",
+      "startdate":"Start Date ᵈᵉ",
+      "enddate":"End Date ᵈᵉ",
+      "insurancenumber":"Insurance Number ᵈᵉ",
+      "companyname":"Company Name ᵈᵉ",
+      "companybranch":"Company Branch ᵈᵉ",
+      "paymentmethod":"Payment method ᵈᵉ",
+      "price":"Price ᵈᵉ",
+      "modaltitle":"Change Folder Name ᵈᵉ",
+      "current":"Current folder name : ᵈᵉ",
+      "newfolder":"New folder name : ᵈᵉ"
     }
   }
 
