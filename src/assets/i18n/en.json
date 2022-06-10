@@ -21,7 +21,8 @@
       "title":"Insurance Folders"
     },
     "detail":{
-      "changename":"Change folder name"
+      "changename":"Change folder name",
+      "hrtitle":"Documents"
     }
   }
 

@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { TranslateService } from '@ngx-translate/core';
 import { ChangeFoldernameComponent } from '../change-foldername/change-foldername.component';
 
 @Component({
@@ -34,10 +35,26 @@ export class DetailComponentComponent implements OnInit {
     isSelected: boolean,
   };
   @Input() onActiveFolder: boolean;
+  hrTitle: string;
 
-  constructor(private matDialog:MatDialog) { }
+  constructor(private matDialog:MatDialog, private translate:TranslateService) {
+    this.hrTitle = this.translate.instant('nav.broker');
+   }
 
   ngOnInit() {
+
+    const wholeDocTemplate = document.getElementsByClassName('current-detail').item(0) as HTMLElement | null;
+
+    if (wholeDocTemplate != null) {
+      document.getElementById("docu-hr").setAttribute('data-content', this.hrTitle);
+
+      var content = window.getComputedStyle(
+        document.querySelector('hr'), ':after'
+      ).getPropertyValue('content');
+
+      alert(content);
+    } 
+
   }
   
   openModal() {
