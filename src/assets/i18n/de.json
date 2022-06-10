@@ -29,11 +29,14 @@
       "insurancenumber":"Insurance Number ᵈᵉ",
       "companyname":"Company Name ᵈᵉ",
       "companybranch":"Company Branch ᵈᵉ",
-      "paymentmethod":"Payment method ᵈᵉ",
+      "paymethod":"Payment method ᵈᵉ",
       "price":"Price ᵈᵉ",
       "modaltitle":"Change Folder Name ᵈᵉ",
       "current":"Current folder name : ᵈᵉ",
-      "newfolder":"New folder name : ᵈᵉ"
+      "newfolder":"New folder name : ᵈᵉ",
+      "save":"Save ᵈᵉ",
+      "welcome":" Welcome. ᵈᵉ",
+      "selectfolder":"Select a Folder. ᵈᵉ"
     }
   }
 
