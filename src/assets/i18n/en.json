@@ -52,6 +52,12 @@
     "chat":{
       "title":"Chat",
       "input-label":"Type a message"
+    },
+    "notifications":{
+      "title":"Notifications"
+    },
+    "report":{
+      "title":"Notification of Claim"
     }
   }
 
