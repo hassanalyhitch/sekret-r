@@ -1,7 +1,7 @@
 <div class="w-100 current-master-nav pb-4">
   <div class="pl-3 pt-3 pb-3 d-flex w-100 bg-white master-nav-title">
     <strong class="section-header" #masternav_title>
-      Inbox
+    {{ 'inbox.nav.title' | translate }}
     </strong>
   </div>
 
@@ -9,7 +9,7 @@
 
     <div class="row p-2">
       <i class="material-icons subheader-darkbrown">arrow_drop_down</i>
-      <span class="section-subheader"> Chat </span>
+      <span class="section-subheader"> {{ 'inbox.nav.chat-title' | translate }} </span>
     </div>
     <div class="col-xs-12 d-block flex-wrap" *ngIf="true">
         <ul class="list-group w-100">
@@ -27,25 +27,25 @@
     
   <div class="row p-2 mt-3">
     <i class="material-icons subheader-darkbrown">arrow_drop_down</i>
-    <span class="section-subheader"> Notifications </span>
+    <span class="section-subheader">  {{ 'inbox.nav.notif-title' | translate }} </span>
   </div>
   <div class="col-xs-12 d-block flex-wrap" *ngIf="true">
       <ul class="list-group w-100 ">
         <li class="list-group-item d-flex align-items-center" (click)="onSelect('notification')" [ngClass]="{'non-active': inboxNav!='notification'}">
             <i class="material-icons mr-3">notifications</i>
-            <span class="align-self-center "> You have 0 notifications </span>
+            <span class="align-self-center "> {{ 'inbox.nav.notif-text' | translate }} 0 {{ 'inbox.nav.notif-text2' | translate }}</span>
         </li> 
       </ul>
   </div>
 
   <div class="row p-2 mt-3">
     <i class="material-icons subheader-darkbrown">arrow_drop_down</i>
-    <span class="section-subheader"> Report </span>
+    <span class="section-subheader"> {{ 'inbox.nav.report-title' | translate }}</span>
   </div>
   <div class="col-xs-12 d-block flex-wrap" *ngIf="true">
       <ul class="list-group w-100 ">
         <li class="list-group-item " (click)="onSelect('report')"  [ngClass]="{'non-active': inboxNav!='report'}">
-          Notification of Claim 
+        {{ 'inbox.nav.report-text' | translate }}  
         </li> 
       </ul>
   </div>

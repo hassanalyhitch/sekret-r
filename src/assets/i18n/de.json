@@ -38,6 +38,17 @@
       "welcome":" Welcome. ᵈᵉ",
       "selectfolder":"Select a Folder. ᵈᵉ"
     }
+  },
+  "inbox":{
+    "nav":{
+      "title":"Inbox ᵈᵉ",
+      "chat-title":"Chat ᵈᵉ",
+      "notif-title":"Notifications ᵈᵉ",
+      "notif-text":"You have ᵈᵉ",
+      "notif-text2":"notifications ᵈᵉ",
+      "report-title":"Report ᵈᵉ",
+      "report-text":"Notification of Claim ᵈᵉ"
+    }
   }
 
 }

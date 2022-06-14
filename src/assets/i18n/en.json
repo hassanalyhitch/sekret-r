@@ -38,6 +38,17 @@
       "welcome":" Welcome.",
       "selectfolder":"Select a Folder."
     }
+  },
+  "inbox":{
+    "nav":{
+      "title":"Inbox",
+      "chat-title":"Chat",
+      "notif-title":"Notifications",
+      "notif-text":"You have",
+      "notif-text2":"notifications",
+      "report-title":"Report",
+      "report-text":"Notification of Claim"
+    }
   }
 
 }
