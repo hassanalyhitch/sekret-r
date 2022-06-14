@@ -48,6 +48,10 @@
       "notif-text2":"notifications ᵈᵉ",
       "report-title":"Report ᵈᵉ",
       "report-text":"Notification of Claim ᵈᵉ"
+    },
+    "chat":{
+      "title":"Chat ᵈᵉ",
+      "input-label":"Type a message ᵈᵉ"
     }
   }
 

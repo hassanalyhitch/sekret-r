@@ -1,6 +1,6 @@
 <div class="w-100 current-detail d-flex flex-column">
   <div class="pl-3 pt-3 pb-3 d-flex w-100 master-title">
-    <strong class="section-header">Chat</strong>
+    <strong class="section-header">{{ 'inbox.chat.title' | translate }}</strong>
   </div>
   <div class="messages">
   
@@ -12,7 +12,7 @@
     <div class="d-flex w-100 ">
       <div class="material-textfield">
         <input placeholder=" " type="text" [(ngModel)]="message" />
-        <label>Type a message</label>
+        <label>{{ 'inbox.chat.input-label' | translate }}</label>
       </div>
       <div class="sendButton ml-2 d-flex justify-content-center align-self-center">
         <i class="material-icons ml-auto p-4 align-self-center">send</i>
