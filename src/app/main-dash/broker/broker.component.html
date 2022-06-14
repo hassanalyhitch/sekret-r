@@ -43,13 +43,13 @@
 
     <div class="col-lg-6 col-xs-12 detail-section-2 p-lg-5 p-2 ">
       <div class="d-flex flex-column section-detail-text ml-lg-0 ml-5">
-        Send a quick message to the Broker
-        <a [routerLink]="['/inbox']" > <button class="btn btn-primary "> Open Inbox</button></a> 
+      {{ 'inbox.instruction.title' | translate }}
+        <a [routerLink]="['/inbox']" > <button class="btn btn-primary "> {{ 'inbox.instruction.button' | translate }}</button></a> 
       </div>
       <div class="d-flex flex-column section-detail-text mt-4 ml-lg-0 ml-5">
-        Add an event to your Calendar
+      {{ 'inbox.instruction2.title' | translate }}
         <span > 
-        <a href="https://calendar.google.com/" target="_blank"  rel="noopener noreferrer" class="calendar "> Open Google Calendar</a></span>
+        <a href="https://calendar.google.com/" target="_blank"  rel="noopener noreferrer" class="calendar "> {{ 'inbox.instruction2.button' | translate }}</a></span>
       </div>
     </div>
   </div>

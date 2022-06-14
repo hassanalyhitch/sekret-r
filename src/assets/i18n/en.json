@@ -59,6 +59,22 @@
     "report":{
       "title":"Notification of Claim"
     }
+  },
+  "broker":{
+    "instruction":{
+      "title":"Send a quick message to the Broker",
+      "button":"Open Inbox"
+    },
+    "instruction2":{
+      "title":"Add an event to your Calendar",
+      "button":"Open Google Calendar"
+    }
+  },
+  "profile":{
+
+  },
+  "settings":{
+    "title":"Settings"
   }
 
 }
