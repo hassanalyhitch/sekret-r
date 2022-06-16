@@ -1,80 +1,77 @@
 {
-  "login":{
-    "username":"Benutzer",
-    "password":"Passwort",
-    "stay":"Angemeldet bleiben ?",
-    "signin":"Einloggen",
-    "header":"Eine neue Dimension der Kundenbetreuung.",
-    "subheader":"Die Brokerage-Zukunft hat begonnen.",
-    "catch-phrase":"Einfach. Schnell. Digital."
+  "login": {
+    "username": "Benutzer",
+    "password": "Passwort",
+    "stay": "Angemeldet bleiben?",
+    "signin": "Einloggen",
+    "header": "Eine neue Dimension der Kundenbetreuung.",
+    "subheader": "Die Makler-Zukunft hat begonnen.",
+    "catch-phrase": "Einfach. Schnell. Digital."
   },
   "nav": {
-      "insurance": "Versicherung",
-      "inbox": "Posteingang",
-      "profile": "Profil",
-      "broker": "Maklerin",
-      "settings": "Einstellungen",
-      "signout": "Ausloggen"
+    "insurance": "Versicherungen",
+    "inbox": "Posteingang",
+    "profile": "Profil",
+    "broker": "Mein Makler",
+    "settings": "Einstellungen",
+    "signout": "Ausloggen"
   },
   "insurance": {
-    "nav":{
-      "title":"Insurance Folders ᵈᵉ"
+    "nav": {
+      "title": "Versicherungen"
     },
-    "detail":{
-      "changename":"Change folder name ᵈᵉ",
-      "hrtitle":"Documents ᵈᵉ",
-      "customername":"Customer Name ᵈᵉ",
-      "startdate":"Start Date ᵈᵉ",
-      "enddate":"End Date ᵈᵉ",
-      "insurancenumber":"Insurance Number ᵈᵉ",
-      "companyname":"Company Name ᵈᵉ",
-      "companybranch":"Company Branch ᵈᵉ",
-      "paymethod":"Payment method ᵈᵉ",
-      "price":"Price ᵈᵉ",
-      "modaltitle":"Change Folder Name ᵈᵉ",
-      "current":"Current folder name : ᵈᵉ",
-      "newfolder":"New folder name : ᵈᵉ",
-      "save":"Save ᵈᵉ",
-      "welcome":" Welcome. ᵈᵉ",
-      "selectfolder":"Select a Folder. ᵈᵉ"
+    "detail": {
+      "changename": "Namen ändern",
+      "hrtitle": "Dokumente",
+      "customername": "Versicherungsnehmer",
+      "startdate": "Startdatum",
+      "enddate": "Enddatum",
+      "insurancenumber": "Versicherungsnummer",
+      "companyname": "Versicherungsunternehmen",
+      "companybranch": "Versicherungsart",
+      "paymethod": "Zahlweise",
+      "price": "Preis",
+      "modaltitle": "Ordnernamen bearbeiten",
+      "current": "Aktueller Ordnername",
+      "newfolder": "Neuer Ordnername",
+      "save": "Speichern",
+      "welcome": "Willkommen",
+      "selectfolder": "Bitte wählen Sie einen Ordner aus."
     }
   },
-  "inbox":{
-    "nav":{
-      "title":"Inbox ᵈᵉ",
-      "chat-title":"Chat ᵈᵉ",
-      "notif-title":"Notifications ᵈᵉ",
-      "notif-text":"You have ᵈᵉ",
-      "notif-text2":"notifications ᵈᵉ",
-      "report-title":"Report ᵈᵉ",
-      "report-text":"Notification of Claim ᵈᵉ"
+  "inbox": {
+    "nav": {
+      "title": "Benachrichtigungen",
+      "chat-title": "Chat",
+      "notif-title": "Benachrichtigungen",
+      "notif-text": "Du hast",
+      "notif-text2": "Benachrichtigungen",
+      "report-title": "Melde",
+      "report-text": "Schadenfall"
     },
-    "chat":{
-      "title":"Chat ᵈᵉ",
-      "input-label":"Type a message ᵈᵉ"
+    "chat": {
+      "title": "Chat",
+      "input-label": "Geben Sie eine Nachricht ein"
     },
-    "notifications":{
-      "title":"Notifications ᵈᵉ"
+    "notifications": {
+      "title": "Benachrichtigungen"
     },
-    "report":{
-      "title":"Notification of Claim ᵈᵉ"
+    "report": {
+      "title": "Schadenfall melden"
     }
   },
-  "broker":{
-    "instruction":{
-      "title":"Send a quick message to the Broker ᵈᵉ",
-      "button":"Open Inbox ᵈᵉ"
+  "broker": {
+    "instruction": {
+      "title": "Sende eine Kurznachricht an deinen Makler",
+      "button": "Posteingang öffnen"
     },
-    "instruction2":{
-      "title":"Add an event to your Calendar ᵈᵉ",
-      "button":"Open Google Calendar ᵈᵉ"
+    "instruction2": {
+      "title": "Füge deinem Google Kalender einen Termin hinzu",
+      "button": "Öffne deinen Google Kalender"
     }
   },
-  "profile":{
-
-  },
-  "settings":{
-    "title":"Settings ᵈᵉ"
+  "profile": {},
+  "settings": {
+    "title": "Einstellungen"
   }
-
 }
