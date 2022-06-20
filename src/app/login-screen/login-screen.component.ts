@@ -25,6 +25,11 @@ export class LoginScreenComponent implements OnInit {
     
     return this.authenticated;
   }
+
+  onSubmit(e){
+    console.log(e);
+  }
+
   changeLang(e){
     if(e.target.checked){
       this.lang.emit('de');

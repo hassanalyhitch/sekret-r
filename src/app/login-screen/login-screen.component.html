@@ -68,8 +68,7 @@ overflow: hidden !important;"
                 justify-content-center
                 align-items-center
                 mx-auto
-              "
-            >
+              ">
               <div
                 class="
                   form-group
@@ -78,8 +77,7 @@ overflow: hidden !important;"
                   flex-column
                   align-items-center
                   mx-4
-                "
-              >
+                ">
                 <img
                   src="../assets/logo.svg"
                   alt="sekretaer_logo"
@@ -87,44 +85,47 @@ overflow: hidden !important;"
                   style="max-width:60%"
                 />
                 <br />
-
-                <div class="material-textfield mt-4">
-                  <input placeholder=" " type="text" [(ngModel)]="username" />
-                  <label>{{ 'login.username' | translate }}</label>
-                </div>
-                <div class="material-textfield mt-4">
-                  <input
-                    placeholder=" "
-                    type="password"
-                    [(ngModel)]="password"
-                  />
-                  <label>{{ 'login.password' | translate }}</label>
-                </div>
-                <div class="row mt-4 w-100 ">
-                  <div class="d-flex flex-column flex-wrap w-100 text-compliment">
-                    <label for="checkbox-signin" class="my-auto">
-                      <input
-                        type="checkbox"
-                        id="checkbox-signin"
-                        name="checkbox-signin"
-                        style="width:36px;"
-                      />
-                      {{ 'login.stay' | translate }}
-                    </label>
+                <form (ngSubmit)= "onSubmit(f)" #f="ngForm" class="d-flex flex-column w-100" > 
+                  <div class="material-textfield mt-4">
+                    <input placeholder=" " type="text" [(ngModel)]="username" name="username" ngModel />
+                    <label>{{ 'login.username' | translate }}</label>
                   </div>
-                </div>
-                <div class="mt-3 w-100">
-                  <button
-                    id="sign-in-btn"
-                    class="btn btn-primary w-100 py-2"
-                    [disabled]="!(username.length >= 2 && password.length > 1)"
-                    (click)="validateUser()"
-                    style="font-size:20px;"
-                  >
-                  {{ 'login.signin' | translate }}
-                  </button>
-                </div>
-                
+                  <div class="material-textfield mt-4">
+                    <input
+                      placeholder=" "
+                      type="password"
+                      [(ngModel)]="password"
+                      name="password"
+                      ngModel
+                    />
+                    <label>{{ 'login.password' | translate }}</label>
+                  </div>
+                  <div class="row mt-4 w-100 ">
+                    <div class="d-flex flex-column flex-wrap w-100 text-compliment">
+                      <label for="checkbox-signin" class="my-auto">
+                        <input
+                          type="checkbox"
+                          id="checkbox-signin"
+                          name="checkbox-signin"
+                          style="width:36px;"
+                          ngModel
+                        />
+                        {{ 'login.stay' | translate }}
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mt-3 w-100">
+                    <button
+                      id="sign-in-btn"
+                      class="btn btn-primary w-100 py-2"
+                      [disabled]="!(username.length > 1 && password.length > 1)"
+                      type="submit"
+                      style="font-size:20px;"
+                    >
+                    {{ 'login.signin' | translate }}
+                    </button>
+                  </div>
+                </form>
                 <div class="d-flex mt-3 mr-2 text-compliment align-self-end align-items-center">
                   <span class="m-2">en </span> 
                   <label class="switch">
