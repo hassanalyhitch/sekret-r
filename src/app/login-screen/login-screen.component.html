@@ -126,13 +126,16 @@ overflow: hidden !important;"
                     </button>
                   </div>
                 </form>
-                <div class="d-flex mt-3 mr-2 text-compliment align-self-end align-items-center">
-                  <span class="m-2">en </span> 
-                  <label class="switch">
-                    <input type="checkbox" value='de' (change)="changeLang($event)">
-                    <span class="slider round"></span>
-                  </label>
-                  <span class="ml-2"> de</span>
+                <div class="d-flex mt-3 mr-2 text-compliment justify-content-center  w-100">
+                  <mat-spinner *ngIf="submitted" color="accent" style="position:fixed" [diameter]='36' class=" align-self-center" ></mat-spinner>
+                  <div class="ml-auto d-flex align-items-center " >
+                    <span class="m-2">en </span> 
+                    <label class="switch">
+                      <input type="checkbox" value='de' (change)="changeLang($event)">
+                      <span class="slider round"></span>
+                    </label>
+                    <span class="ml-2"> de</span>
+                  </div>
                 </div>
               </div>
             </div>

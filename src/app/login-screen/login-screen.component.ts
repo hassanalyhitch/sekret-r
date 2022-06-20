@@ -11,6 +11,7 @@ export class LoginScreenComponent implements OnInit {
 
   username = '';
   password = '';
+  submitted:boolean = false;
   @Output('auth') authenticated = new EventEmitter<boolean>();
   @Output() lang = new EventEmitter<string>();
 
@@ -28,6 +29,8 @@ export class LoginScreenComponent implements OnInit {
 
   onSubmit(e){
     console.log(e);
+    this.submitted = true;
+    this.validateUser();
   }
 
   changeLang(e){
