@@ -30,7 +30,7 @@ export class LoginScreenComponent implements OnInit {
   onSubmit(e){
     console.log(e);
     this.submitted = true;
-    this.validateUser();
+    // this.validateUser();
   }
 
   changeLang(e){
