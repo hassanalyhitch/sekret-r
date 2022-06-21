@@ -87,7 +87,7 @@ overflow: hidden !important;"
                 <br />
                 <form (ngSubmit)= "onSubmit(f)" #f="ngForm" class="d-flex flex-column w-100" > 
                   <div class="material-textfield mt-4">
-                    <input placeholder=" " type="text" [(ngModel)]="username" name="username" ngModel />
+                    <input placeholder=" " type="text" [(ngModel)]="username" name="username" ngModel required/>
                     <label>{{ 'login.username' | translate }}</label>
                   </div>
                   <div class="material-textfield mt-4">
@@ -97,6 +97,7 @@ overflow: hidden !important;"
                       [(ngModel)]="password"
                       name="password"
                       ngModel
+                      required
                     />
                     <label>{{ 'login.password' | translate }}</label>
                   </div>
