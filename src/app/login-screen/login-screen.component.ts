@@ -17,6 +17,7 @@ export class LoginScreenComponent implements OnInit {
   submitted: boolean = false;
   @Output('auth') authenticated = new EventEmitter<boolean>();
   @Output() lang = new EventEmitter<string>();
+  errorMessage = null;
 
   constructor(private http: HttpClient, private loginService: LoginService) {}
 
@@ -30,7 +31,9 @@ export class LoginScreenComponent implements OnInit {
         console.log(resp)
       },
       error: (e) => {
-        console.error(e)
+        console.log(e);
+        this.errorMessage = e.message;
+        this.submitted = false;
       },
       complete: () => {
         console.info('complete')
