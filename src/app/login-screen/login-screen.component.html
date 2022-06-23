@@ -85,7 +85,7 @@ overflow: hidden !important;"
                   style="max-width:60%"
                 />
                 <br />
-                <form (ngSubmit)= "onSubmit(f)" #f="ngForm" class="d-flex flex-column w-100" > 
+                <form (ngSubmit)= "onSubmit(loginForm.value)" #loginForm="ngForm" class="d-flex flex-column w-100" > 
                   <div class="material-textfield mt-4">
                     <input placeholder=" " type="text" [(ngModel)]="username" name="username" ngModel required/>
                     <label>{{ 'login.username' | translate }}</label>
@@ -119,7 +119,7 @@ overflow: hidden !important;"
                     <button
                       id="sign-in-btn"
                       class="btn btn-primary w-100 py-2"
-                      [disabled]="!(username.length > 1 && password.length > 1)"
+                      [disabled]="!(username.length > 1 && password.length > 1) && !loginForm.valid"
                       type="submit"
                       style="font-size:20px;"
                     >
