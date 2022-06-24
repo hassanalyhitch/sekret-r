@@ -45,6 +45,7 @@ export class LoginScreenComponent implements OnInit {
   onSubmit(formData: LoginData) {
     formData.loginType = 'customer';
     this.submitted = true;
+    this.errorMessage = null;
     this.validateUser(formData);
   }
 
