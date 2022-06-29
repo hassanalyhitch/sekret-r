@@ -7,7 +7,7 @@ export class LoginService {
   constructor(private http: HttpClient) {}
 
   login(data: LoginData) {
-    return this.http.post('https://testapi.maxpool.de/api/v1/login', data, {
+    return this.http.post('/api/v1/login', data, {
       headers: new HttpHeaders({
         'accept': 'application/json',
         'Content-Type': 'application/json',
