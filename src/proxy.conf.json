@@ -1,7 +1,7 @@
 {
   "/api": {
     "target": "https://testapi.maxpool.de",
-    "changeOrigin": true,
+    "changeOrigin": false,
     "secure":true
   }
 }
