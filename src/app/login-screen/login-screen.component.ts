@@ -29,11 +29,14 @@ export class LoginScreenComponent implements OnInit {
     this.loginService.login(formData).subscribe({
       next: (resp) => {
         console.log(resp);
-        this.authenticated.emit(true);
+        if(resp.hasOwnProperty("token")){
+          
+          this.authenticated.emit(true);
+        }
       },
       error: (e) => {
         console.log(e);
-        this.errorMessage = e.message;
+        this.errorMessage = e.error.msg;
         this.submitted = false;
       },
       complete: () => {
