@@ -28,7 +28,8 @@ export class LoginScreenComponent implements OnInit {
       
     this.loginService.login(formData).subscribe({
       next: (resp) => {
-        console.log(resp)
+        console.log(resp);
+        this.authenticated.emit(true);
       },
       error: (e) => {
         console.log(e);
@@ -39,7 +40,6 @@ export class LoginScreenComponent implements OnInit {
         console.info('complete')
       }
     });
-    this.authenticated.emit(false);
   }
 
   onSubmit(formData: LoginData) {
