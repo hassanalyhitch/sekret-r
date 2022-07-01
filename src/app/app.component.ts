@@ -1,4 +1,4 @@
-import { Component, VERSION } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 
