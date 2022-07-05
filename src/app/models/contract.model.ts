@@ -1,26 +1,24 @@
 export interface ContractData {
-    
-  title: string;
-  id: number;
+  title: string,
+  id: number,
   details: {
-    CustomerId01: string;
-    InsuranceId01: string;
-    InsuranceNumber: string;
-    CompanyId: string;
-    CompanyLong: string;
-    CompanyShort: string;
-    StartDate: string;
-    EndDate: string;
-    Price: string;
-    Paymethod: string;
-    Branch: string;
-    BranchShort: string;
-    CustomerName: string;
-  };
-  files: {
-    name: string;
-    fileUrl: string;
-  }[];
-  isSelected: boolean;
-
+    Amsidnr: string,
+    CustomerAmsidnr: string,
+    InsuranceId: string,
+    ContractNumber: string,
+    Company: string,
+    StartDate: string,
+    EndDate: string,
+    YearlyPayment: string,
+    Paymethod: string,
+    Branch: string,
+    Risk: string,
+    docs: {
+      category: string,
+      docid: string,
+      name: string,
+      createdAt: string
+    }[]
+  },
+  isSelected: boolean
 }

@@ -21,7 +21,7 @@ export class LoginService {
         
         if(resp.hasOwnProperty("token")){  
           this.authToken = resp.token;
-          console.log(this.authToken);
+          // console.log(this.authToken);
         } else{
           console.log(resp);
         }

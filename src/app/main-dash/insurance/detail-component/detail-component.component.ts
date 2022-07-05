@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { TranslateService } from '@ngx-translate/core';
+import { ContractData } from '../../../models/contract.model';
 import { ChangeFoldernameComponent } from '../change-foldername/change-foldername.component';
 
 @Component({
@@ -10,30 +11,7 @@ import { ChangeFoldernameComponent } from '../change-foldername/change-foldernam
 })
 export class DetailComponentComponent implements OnInit {
 
-  @Input() folder:{
-    title: string,
-    id: number,
-    details:{
-      CustomerId01:string,
-      InsuranceId01:string,
-      InsuranceNumber:string,
-      CompanyId:string,
-      CompanyLong:string,
-      CompanyShort:string,
-      StartDate:string,
-      EndDate:string,
-      Price:string,
-      Paymethod:string,
-      Branch:string,
-      BranchShort:string,
-      CustomerName:string
-    },
-    files:{
-      name:string,
-      fileUrl:string
-    }[],
-    isSelected: boolean,
-  };
+  @Input() folder:ContractData;
   @Input() onActiveFolder: boolean;
   hrTitle: string;
 

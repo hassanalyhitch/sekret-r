@@ -18,62 +18,7 @@ import { ContractsService } from '../../../services/contracts.service';
   styleUrls: ['./master-nav.component.css'],
 })
 export class MasterNavComponent implements OnInit {
-  folders: ContractData[] = [
-    {
-      title: 'Folder 1',
-      id: 1,
-      details: {
-        CustomerId01: 'CustomerId01',
-        InsuranceId01: 'InsuranceId01',
-        InsuranceNumber: '520-963321/8',
-        CompanyId: 'AXA-ALLG',
-        CompanyLong: 'Axa Allgemeine Versicherung',
-        CompanyShort: 'Axa',
-        StartDate: '2021-01-01',
-        EndDate: '2023-01-01',
-        Price: '50.43',
-        Paymethod: 'Monatlich',
-        Branch: 'Haftpflichtversicherung',
-        BranchShort: 'Haftpflicht',
-        CustomerName: 'Zak, Andreas',
-      },
-      files: [
-        {
-          name: 'ppt sample file.ppt',
-          fileUrl:
-            'https://www.adobe.com/support/ovation/ts/docs/ovation_test_show.ppt',
-        },
-        {
-          name: 'xls sample file.xls',
-          fileUrl:
-            'https://dornsife.usc.edu/assets/sites/298/docs/ir211wk12sample.xls',
-        },
-      ],
-      isSelected: false,
-    },
-    {
-      title: 'Folder 2',
-      id: 2,
-      details: {
-        CustomerId01: 'CustomerId01',
-        InsuranceId01: 'InsuranceId02',
-        InsuranceNumber: '445-44321MAX',
-        CompanyId: 'PHOES-ALLG',
-        CompanyLong: 'Phoenix Schutzgemeinschaft',
-        CompanyShort: 'Phoenix',
-        StartDate: '2020-06-01',
-        EndDate: '2023-06-01',
-        Price: '421.35',
-        Paymethod: 'J&auml;hrlich',
-        Branch: 'Unfallversicherung',
-        BranchShort: 'Unfall',
-        CustomerName: 'Zak, Andreas',
-      },
-      files: [
-      ],
-      isSelected: false,
-    },
-  ];
+  folders: ContractData[] = [];
   // masternavTitle: string = 'Insurance Folders';
 
   @Output('selection') selectedFolder = new EventEmitter<{}>();
@@ -97,14 +42,47 @@ export class MasterNavComponent implements OnInit {
     
     this.contractService.getContracts().subscribe({
       next: (resp) => {
-        console.log(resp);
+        //loop and assign data to folders array
+
+        if(Array.isArray(resp)){
+          let index: number = 0;
+          for(let item of resp){
+
+            let folder: ContractData = {
+              title: "Folder "+(index+1),
+              id: index,
+              details: {
+                Amsidnr: item['Amsidnr'],
+                CustomerAmsidnr:  item['CustomerAmsidnr'],
+                InsuranceId:  item['Contractnumber'],
+                ContractNumber:  item['Contractnumber'],
+                Company:  item['Company'],
+                StartDate:  item['Begin'],
+                EndDate:  '',
+                YearlyPayment:  item['YearlyPayment'],
+                Paymethod:  item['PaymentMethod'],
+                Branch:  item['Branch'],
+                Risk:  item['Risk'],
+                docs: item['docs']
+              },
+              isSelected: false
+            };
+            this.folders.push(folder);
+            index++;
+          }
+
+       } else {
+        //invalid token
+
+       }
+
       },
       error: (e) => {
         console.log(e);
         
       },
       complete: () => {
-        console.info('complete')
+        // console.info('complete')
       }
     });
   }

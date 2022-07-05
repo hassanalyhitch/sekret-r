@@ -9,8 +9,10 @@ import { FileviewComponent } from '../fileview/fileview.component';
 })
 export class FileComponent implements OnInit {
   @Input() file: {
-    name: string;
-    fileUrl: string;
+    category: string,
+    docid: string,
+    name: string,
+    createdAt: string
   };
 
   constructor(private matDialog: MatDialog) {}
@@ -19,7 +21,8 @@ export class FileComponent implements OnInit {
 
   openModal() {
     const dialogConfig = new MatDialogConfig();
-    let passdata:string = '{"fileName": "'+this.file.name+'","fileUrl": "'+this.file.fileUrl+'"}';
+    // let passdata:string = '{"fileName": "'+this.file.name+'","fileUrl": "'+this.file.fileUrl+'"}';
+    let passdata:string = '{"fileName": "'+this.file.name+'"}';
     // The user can't close the dialog by clicking outside its body
     dialogConfig.disableClose = false;
     dialogConfig.id = 'modal-component';

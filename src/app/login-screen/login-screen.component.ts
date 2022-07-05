@@ -28,7 +28,8 @@ export class LoginScreenComponent implements OnInit {
       
     this.loginService.login(formData).subscribe({
       next: (resp) => {
-        console.log(resp);
+        // console.log(resp);
+        
         if(resp.hasOwnProperty("token")){
           
           this.authenticated.emit(true);
@@ -40,7 +41,7 @@ export class LoginScreenComponent implements OnInit {
         this.submitted = false;
       },
       complete: () => {
-        console.info('complete')
+        // console.info('complete')
       }
     });
   }
