@@ -9,6 +9,8 @@ import {
 } from '@angular/core';
 import { NavigationEnd, Router, Event } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { ContractData } from '../../../models/contract.model';
+import { ContractsService } from '../../../services/contracts.service';
 
 @Component({
   selector: 'app-master-nav',
@@ -16,30 +18,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./master-nav.component.css'],
 })
 export class MasterNavComponent implements OnInit {
-  folders: {
-    title: string;
-    id: number;
-    details: {
-      CustomerId01: string;
-      InsuranceId01: string;
-      InsuranceNumber: string;
-      CompanyId: string;
-      CompanyLong: string;
-      CompanyShort: string;
-      StartDate: string;
-      EndDate: string;
-      Price: string;
-      Paymethod: string;
-      Branch: string;
-      BranchShort: string;
-      CustomerName: string;
-    };
-    files: {
-      name: string;
-      fileUrl: string;
-    }[];
-    isSelected: boolean;
-  }[] = [
+  folders: ContractData[] = [
     {
       title: 'Folder 1',
       id: 1,
@@ -101,7 +80,7 @@ export class MasterNavComponent implements OnInit {
   @Output() reset = new EventEmitter<boolean>();
   routeListener: Subscription;
 
-  constructor(private route: Router) {}
+  constructor(private route: Router, private contractService: ContractsService) {}
 
   ngOnInit() {
     this.routeListener = this.route.events.subscribe((event: Event) => {
@@ -113,6 +92,19 @@ export class MasterNavComponent implements OnInit {
           this.reset.emit(true);
           console.log('back home');
         }
+      }
+    });
+    
+    this.contractService.getContracts().subscribe({
+      next: (resp) => {
+        console.log(resp);
+      },
+      error: (e) => {
+        console.log(e);
+        
+      },
+      complete: () => {
+        console.info('complete')
       }
     });
   }

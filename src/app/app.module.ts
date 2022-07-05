@@ -37,11 +37,13 @@ import { NotificationsComponent } from './main-dash/inbox/notifications/notifica
 import { ReportComponent } from './main-dash/inbox/report/report.component';
 import { HatoolLibModule } from 'hatool';
 import { ChatbotComponent } from './main-dash/inbox/chatbot/chatbot.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // import ngx-translate and the http loader
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { APP_BASE_HREF } from '@angular/common';
+import { AuthInterceptorService } from './interceptors/auth-interceptor.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'insurance', pathMatch: 'full' },
@@ -123,5 +125,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ChatbotComponent
   ],
   bootstrap: [AppComponent],
+  providers: [
+    {provide: APP_BASE_HREF, useValue: '/'},
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true}
+  ]
 })
 export class AppModule {}
