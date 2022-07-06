@@ -1,6 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router, Event } from '@angular/router';
-import { Subscription } from 'rxjs';
 import { ContractData } from '../../models/contract.model';
 
 @Component({
@@ -8,13 +7,17 @@ import { ContractData } from '../../models/contract.model';
   templateUrl: './insurance.component.html',
   styleUrls: ['./insurance.component.css'],
 })
-export class InsuranceComponent implements OnInit {
+export class InsuranceComponent implements OnInit, OnDestroy {
   contentSelected: boolean = false;
   selectedFolder: ContractData;
   onActiveFolder:boolean;
+
   constructor() {}
 
   ngOnInit() {
+    
+  }
+  ngOnDestroy(){
   }
 
   onFolderSelect($event) {
