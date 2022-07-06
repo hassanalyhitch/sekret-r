@@ -7,7 +7,7 @@ import { LoginData } from '../models/login.model';
 
 export class LoginService {
 
-  public authToken:string = "";
+  public authToken:string;
   constructor(private http: HttpClient) {}
 
   login(data: LoginData) {

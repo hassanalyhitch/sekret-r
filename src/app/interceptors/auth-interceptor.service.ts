@@ -14,12 +14,18 @@ export class AuthInterceptorService implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         
 
-        if(this.loginService.authToken!=null){
+        if(this.loginService.authToken!==null && this.loginService.authToken !== undefined){
 
             this.auth = 'Bearer ' + this.loginService.authToken;
             this.authReq = req.clone({
                 headers:req.headers.append('Authorization', this.auth )
             });
+        } else {
+            //this user is not logged in and is manually writing a url address
+            //redirect to home login screen 
+            // this.authReq = req.clone({url:''});
+            console.log(req.url);
+            this.authReq = req.clone();
         }
 
         if(!req.url.includes('login')){

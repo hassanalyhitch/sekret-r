@@ -46,6 +46,7 @@ export class MasterNavComponent implements OnInit {
 
         if(Array.isArray(resp)){
           let index: number = 0;
+          console.log(resp[0]['CustomerAmsidnr']);
           for(let item of resp){
 
             let folder: ContractData = {
