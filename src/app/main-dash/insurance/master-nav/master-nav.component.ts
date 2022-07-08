@@ -1,3 +1,4 @@
+import { formatCurrency, formatDate } from '@angular/common';
 import {
   Component,
   DoCheck,
@@ -46,9 +47,12 @@ export class MasterNavComponent implements OnInit {
 
         if(Array.isArray(resp)){
           let index: number = 0;
-          console.log(resp[0]['CustomerAmsidnr']);
+
           for(let item of resp){
-            console.log(item['Amsidnr']);
+            //format date and currency
+            item['Begin'] = formatDate(item['Begin'], "dd-MM-YYYY","en");
+            item['YearlyPayment'] = formatCurrency(item['YearlyPayment'],"de","");
+            //
             let folder: ContractData = {
               title: "Folder "+(index+1),
               id: index,
