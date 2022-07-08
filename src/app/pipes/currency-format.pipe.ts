@@ -6,14 +6,14 @@ import { Injectable } from '@angular/core';
 })
 export class CurrencyFormatPipe implements PipeTransform {
 
-  transform(value: string,
+  transform(val: string,
     currencySign: string = '€ ',
     decimalLength: number = 2, 
     chunkDelimiter: string = '.', 
     decimalDelimiter:string = ',',
     chunkLength: number = 3): string {
 
-    value = parseFloat(value);
+    let value = parseFloat(val);
     // value /= 100;
 
     let result = '\\d(?=(\\d{' + chunkLength + '})+' + (decimalLength > 0 ? '\\D' : '$') + ')';

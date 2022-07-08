@@ -49,9 +49,8 @@ export class MasterNavComponent implements OnInit {
           let index: number = 0;
 
           for(let item of resp){
-            //format date and currency
+            //format date 
             item['Begin'] = formatDate(item['Begin'], "dd-MM-YYYY","en");
-            item['YearlyPayment'] = formatCurrency(item['YearlyPayment'],"de","");
             //
             let folder: ContractData = {
               title: "Folder "+(index+1),
