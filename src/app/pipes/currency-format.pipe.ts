@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
 @Pipe({
   name: 'currencyFormat'
 })
-@Injectable({ providedIn: 'root' })
 export class CurrencyFormatPipe implements PipeTransform {
 
   transform(value: number,
