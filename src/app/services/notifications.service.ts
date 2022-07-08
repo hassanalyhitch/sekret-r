@@ -3,23 +3,27 @@ import { NotificationData } from "../models/notification.model";
 
 @Injectable({ providedIn: 'root' })
 export class NotificationService{
-    notifications: NotificationData[];
+    notifications: NotificationData[] = [
+      {
+        id: 0,
+        message: "This is a notice for you to notice that you are noticed"
+      },
+      {
+        id: 1,
+        message: "This is a notice for you to notice that you are noticed"
+      },
+      {
+        id: 2,
+        message: "This is a notice for you to notice that you are noticed"
+      },
+    ];;
 
     getNotifications(){
-      this.notifications = [
-        {
-          id: 0,
-          message: "This is a notice for you to notice that you are noticed"
-        },
-        {
-          id: 1,
-          message: "This is a notice for you to notice that you are noticed"
-        },
-        {
-          id: 2,
-          message: "This is a notice for you to notice that you are noticed"
-        },
-      ];
+      
       return this.notifications;
+    }
+
+    getNotificationCount(){
+      return this.notifications.length;
     }
 }

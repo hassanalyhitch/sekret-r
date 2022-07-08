@@ -33,7 +33,7 @@
       <ul class="list-group w-100 ">
         <li class="list-group-item d-flex align-items-center" (click)="onSelect('notification')" [ngClass]="{'non-active': inboxNav!='notification'}">
             <i class="material-icons mr-3">notifications</i>
-            <span class="align-self-center "> {{ 'inbox.nav.notif-text' | translate }} 0 {{ 'inbox.nav.notif-text2' | translate }}</span>
+            <span class="align-self-center "> {{ 'inbox.nav.notif-text' | translate }} {{numberOfNotif}} {{ 'inbox.nav.notif-text2' | translate }}</span>
         </li> 
       </ul>
   </div>

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router, NavigationEnd, Event } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { NotificationService } from '../../../services/notifications.service';
 
 @Component({
   selector: 'inbox-master-nav',
@@ -9,11 +10,12 @@ import { Subscription } from 'rxjs';
 })
 export class InboxMasterNavComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private notificationService: NotificationService) { }
   @Output() navSelect = new EventEmitter<string>();
   @Output() reset = new EventEmitter<boolean>();
   inboxNav:string ;
   routeListener: Subscription;
+  numberOfNotif: number;
 
   ngOnInit() {
     this.activateInboxNav();
@@ -29,6 +31,7 @@ export class InboxMasterNavComponent implements OnInit {
         }
       }
     });
+    this.numberOfNotif = this.notificationService.getNotificationCount();
   }
 
   activateInboxNav(){
