@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NotificationData } from '../../../../models/notification.model';
 
 @Component({
   selector: 'app-notification-item',
@@ -7,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NotificationItemComponent implements OnInit {
 
-  @Input() notif:{id: number, message: string};
+  @Input() notif: NotificationData;
   constructor() { }
 
   ngOnInit() {

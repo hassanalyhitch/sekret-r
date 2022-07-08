@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NotificationData } from '../../../models/notification.model';
+import { NotificationService } from '../../../services/notifications.service';
 
 @Component({
   selector: 'app-notifications',
@@ -7,25 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificationsComponent implements OnInit {
 
-  notifications:{id: number, message: string}[];
+ @Input() notifications:NotificationData [];
 
-  constructor() { }
+  constructor(private notificationService: NotificationService) { }
 
   ngOnInit() {
-    this.notifications = [
-      {
-        id: 0,
-        message: "This is a notice for you to notice that you are noticed"
-      },
-      {
-        id: 1,
-        message: "This is a notice for you to notice that you are noticed"
-      },
-      {
-        id: 2,
-        message: "This is a notice for you to notice that you are noticed"
-      },
-    ];
+    this.notifications = this.notificationService.getNotifications();
   }
 
 }
