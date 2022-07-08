@@ -14,7 +14,7 @@ export class CurrencyFormatPipe implements PipeTransform {
     chunkLength: number = 3): string {
 
     value = parseFloat(value);
-    value /= 100;
+    // value /= 100;
 
     let result = '\\d(?=(\\d{' + chunkLength + '})+' + (decimalLength > 0 ? '\\D' : '$') + ')';
     let num = value.toFixed(Math.max(0, ~~decimalLength));
