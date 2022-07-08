@@ -26,8 +26,6 @@ export class InboxComponent implements OnInit, OnDestroy {
 
     this.subscription = this.route.url.subscribe((e)=>{
       this.routeUrl = e[0].path;
-      console.log('current RouteUrl is = '+this.routeUrl);
-      console.log('current WindowUrl is = '+this.windowUrl);
     });
 
     if(this.routeUrl === 'inbox'){

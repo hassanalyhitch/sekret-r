@@ -45,6 +45,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { APP_BASE_HREF } from '@angular/common';
 import { AuthInterceptorService } from './interceptors/auth-interceptor.service';
 import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
+import { NotificationItemComponent } from './main-dash/inbox/notifications/notification-item/notification-item.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'insurance', pathMatch: 'full' },
@@ -124,7 +125,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     NotificationsComponent,
     ReportComponent,
     ChatbotComponent,
-    CurrencyFormatPipe
+    CurrencyFormatPipe,
+    NotificationItemComponent
   ],
   bootstrap: [AppComponent],
   providers: [

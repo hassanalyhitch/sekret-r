@@ -3,5 +3,8 @@
     <strong class="section-header">{{ 'inbox.notifications.title' | translate }}</strong>
   </div>
   <div class="detail-container-wrapper d-flex flex-column pb-3 bg-white ">
+    <div *ngFor="let notif of notifications" >
+      <app-notification-item [notif]=notif ></app-notification-item>
+    </div>
   </div>
 </div>
