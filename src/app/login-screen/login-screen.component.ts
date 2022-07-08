@@ -37,7 +37,15 @@ export class LoginScreenComponent implements OnInit {
       },
       error: (e) => {
         console.log(e);
-        this.errorMessage = e.error.msg;
+        if(e.hasOwnProperty("name") && e.hasOwnProperty("statusText")){
+          this.errorMessage = " "+e.name+" -> "+e.statusText;
+          console.log( 'display this error => '+this.errorMessage);
+        }
+
+        if(e.error.hasOwnProperty('msg')){
+          this.errorMessage = e.error.msg;
+          console.log( 'display this error => '+this.errorMessage);
+        }
         this.submitted = false;
       },
       complete: () => {
