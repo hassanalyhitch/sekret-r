@@ -50,7 +50,7 @@ export class MasterNavComponent implements OnInit {
 
           for(let item of resp){
             //format date 
-            item['Begin'] = formatDate(item['Begin'], "dd-MM-YYYY","en");
+            item['Begin'] = formatDate(item['Begin'], "dd.MM.YYYY","en");
             //
             let folder: ContractData = {
               title: "Folder "+(index+1),
