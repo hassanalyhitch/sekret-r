@@ -1,6 +1,6 @@
 .notif {
-  border: solid 0.1rem rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.19), 0 1px 2px rgba(0,0,0,0.23);
+  border: solid 0.05rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 2px rgba(0,0,0,0.19), 0 0px 2px rgba(0,0,0,0.19);
   border-radius: 4px;
   cursor: pointer;
   transition: height 1000ms;
@@ -8,12 +8,14 @@
 
 .text-black {
   color: #1d1d1b;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .date{
   color: #1d1d1b;
+  font-size: 0.9rem;
 }
 .text-compliment {
   color: #575756;
+  font-size: 0.9rem;
   font-weight: 300;
 }
