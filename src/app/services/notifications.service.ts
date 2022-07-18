@@ -20,7 +20,7 @@ export class NotificationService{
         id: 2,
         title: "Dance Monkey",
         createdAt: "07.07.2022",
-        message: "They say oh my God I see the way you shine \r Take your hand, my dear, and place them both in mine\rYou know you stopped me dead while I was passing by\rAnd now I beg to see you dance just one more time"
+        message: "They say oh my God I see the way you shine;\n Take your hand, my dear, and place them both in mine;\nYou know you stopped me dead while I was passing by;\nAnd now I beg to see you dance just one more time"
       },
     ];;
 
