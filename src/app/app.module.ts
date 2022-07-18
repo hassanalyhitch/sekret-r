@@ -47,7 +47,6 @@ import { AuthInterceptorService } from './interceptors/auth-interceptor.service'
 import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
 import { NotificationItemComponent } from './main-dash/inbox/notifications/notification-item/notification-item.component';
 import { ShortenFilenamePipe } from './pipes/shorten-filename.pipe';
-import { AnimatedLogoComponent } from './animated-logo/animated-logo.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'insurance', pathMatch: 'full' },
