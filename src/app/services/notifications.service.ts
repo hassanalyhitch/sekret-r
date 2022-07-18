@@ -14,7 +14,7 @@ export class NotificationService{
         id: 1,
         title: "Tones and I",
         createdAt: "07.07.2022",
-        message: "This is a notice for you to notice that you are noticed"
+        message: "Ultratop Hit Connection "
       },
       {
         id: 2,

@@ -8,8 +8,8 @@ export class ShortenFilenamePipe implements PipeTransform {
 
   transform(longName: string){
     let shortName:string;
-        if(longName.length > 22){
-          shortName = longName.substring(0, 22)+"...";
+        if(longName.length > 27){
+          shortName = longName.substring(0, 28)+"...";
         } else {
           shortName = longName;
         }
