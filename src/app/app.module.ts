@@ -130,7 +130,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     CurrencyFormatPipe,
     NotificationItemComponent,
     ShortenFilenamePipe,
-    AnimatedLogoComponent
   ],
   bootstrap: [AppComponent],
   providers: [
