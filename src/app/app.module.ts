@@ -47,6 +47,7 @@ import { AuthInterceptorService } from './interceptors/auth-interceptor.service'
 import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
 import { NotificationItemComponent } from './main-dash/inbox/notifications/notification-item/notification-item.component';
 import { ShortenFilenamePipe } from './pipes/shorten-filename.pipe';
+import { NewContractComponent } from './main-dash/insurance/new-contract/new-contract.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'insurance', pathMatch: 'full' },
@@ -55,6 +56,7 @@ const appRoutes: Routes = [
     component: InsuranceComponent,
     children: [
       { path: 'folder', component: DetailComponentComponent },
+      { path: 'new-contract', component: NewContractComponent },
       // { path: '', redirectTo: 'insurance'}
     ],
   },
@@ -129,6 +131,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     CurrencyFormatPipe,
     NotificationItemComponent,
     ShortenFilenamePipe,
+    NewContractComponent
   ],
   bootstrap: [AppComponent],
   providers: [
