@@ -95,7 +95,8 @@ export class MasterNavComponent implements OnInit {
       if (this.folders[i].id == event) {
         this.folders[i].isSelected = true;
         this.selectedFolder.emit(this.folders[i]);
-        this.contractService.selectedFolder = this.folders[i];
+        this.contractService.emitSelectedFolder(this.folders[i]);
+        console.log(this.contractService.selectedFolder.id);
       } else {
         this.folders[i].isSelected = false;
       }

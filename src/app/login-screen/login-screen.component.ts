@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginData } from '../models/login.model';
 import { LoginService } from '../services/login.service';
 
@@ -19,20 +20,20 @@ export class LoginScreenComponent implements OnInit {
   @Output() lang = new EventEmitter<string>();
   errorMessage = null;
 
-  constructor(private http: HttpClient, private loginService: LoginService) {}
+  constructor(private http: HttpClient, private router: Router, private loginService: LoginService) {}
 
   ngOnInit() {}
 
   validateUser(formData: LoginData) {
-    //... 
       
     this.loginService.login(formData).subscribe({
       next: (resp) => {
-        // console.log(resp);
         
         if(resp.hasOwnProperty("token")){
-          
           this.authenticated.emit(true);
+
+          //reset route
+          this.router.navigate(['/']);
         }
       },
       error: (e) => {
