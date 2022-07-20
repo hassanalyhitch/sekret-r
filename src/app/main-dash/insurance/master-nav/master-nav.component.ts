@@ -24,19 +24,19 @@ export class MasterNavComponent implements OnInit {
   @Output('selection') selectedFolder = new EventEmitter<{}>();
   @Output() reset = new EventEmitter<boolean>();
   routeListener: Subscription;
-  @Output('btnclick') newcontractbtn =new EventEmitter<boolean>();
+  @Output('btn-contract') newcontractbtn =new EventEmitter<boolean>();
 
-  constructor(private route: Router, private contractService: ContractsService) {}
+  constructor(private router: Router, private contractService: ContractsService) {}
 
   ngOnInit() {
-    this.routeListener = this.route.events.subscribe((event: Event) => {
+    this.routeListener = this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
-        if (!event.url.includes('folder')) {
+        console.log(event.url);
+        if (event.url==='/insurance') {
           for (let i = 0; i < this.folders.length; i++) {
             this.folders[i].isSelected = false;
           }
           this.reset.emit(true);
-          console.log('back home');
         }
       }
     });
@@ -106,6 +106,7 @@ export class MasterNavComponent implements OnInit {
   
   onButtonSelected(){
     this.newcontractbtn.emit(true);
+
   }
 
   ngOnDestroy() {

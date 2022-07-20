@@ -55,6 +55,7 @@ const appRoutes: Routes = [
     path: 'insurance',
     component: InsuranceComponent,
     children: [
+      { path: '', component: DetailPlaceholderComponent },
       { path: 'folder', component: DetailComponentComponent },
       { path: 'new-contract', component: NewContractComponent },
       // { path: '', redirectTo: 'insurance'}

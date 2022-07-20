@@ -26,4 +26,15 @@ export class InsuranceComponent implements OnInit, OnDestroy {
     this.router.navigate(['insurance/folder']);
   }
 
+  onReset($event){
+    this.contentSelected = false;
+    console.log('reset and show only masternav');
+  }
+
+  onButtonSelected($event){
+    this.contentSelected = true;
+
+    this.router.navigate(['insurance/new-contract']);
+  }
+
 }
