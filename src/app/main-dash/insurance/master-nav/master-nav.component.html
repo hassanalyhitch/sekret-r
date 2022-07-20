@@ -9,15 +9,22 @@
       w-100
       bg-white
       master-nav-title
+      justify-content-center
+      align-items-center
     "
   >
-    <strong class="section-header" #masternav_title>
+    <strong class="section-header">
       {{ 'insurance.nav.title' | translate }} &nbsp;&nbsp;
     </strong>
+    
+    <div class="addButton ml-auto d-flex justify-content-center align-self-center" (click)=" onButtonSelected()">
+      <i class="material-icons ml-auto p-4 align-self-center">add</i>
+    </div>
+        
   </div>
 
   <div class="container pb-5 w-100">
-    <div class="row p-1">
+    <div class="row p-1 ">
       <div class="w-100 d-flex flex-column">
         <app-folder
           *ngFor="let folder of folders; last as isLast"

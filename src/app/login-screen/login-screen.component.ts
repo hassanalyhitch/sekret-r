@@ -33,7 +33,7 @@ export class LoginScreenComponent implements OnInit {
           this.authenticated.emit(true);
 
           //reset route
-          this.router.navigate(['/']);
+          // this.router.navigateByUrl('/insurance');
         }
       },
       error: (e) => {

@@ -24,6 +24,7 @@ export class MasterNavComponent implements OnInit {
   @Output('selection') selectedFolder = new EventEmitter<{}>();
   @Output() reset = new EventEmitter<boolean>();
   routeListener: Subscription;
+  @Output('btnclick') newcontractbtn =new EventEmitter<boolean>();
 
   constructor(private route: Router, private contractService: ContractsService) {}
 
@@ -101,6 +102,10 @@ export class MasterNavComponent implements OnInit {
         this.folders[i].isSelected = false;
       }
     }
+  }
+  
+  onButtonSelected(){
+    this.newcontractbtn.emit(true);
   }
 
   ngOnDestroy() {
