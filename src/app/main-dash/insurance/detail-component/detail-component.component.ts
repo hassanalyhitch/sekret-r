@@ -2,6 +2,7 @@ import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { TranslateService } from '@ngx-translate/core';
 import { ContractData } from '../../../models/contract.model';
+import { ContractsService } from '../../../services/contracts.service';
 import { ChangeFoldernameComponent } from '../change-foldername/change-foldername.component';
 
 @Component({
@@ -11,16 +12,16 @@ import { ChangeFoldernameComponent } from '../change-foldername/change-foldernam
 })
 export class DetailComponentComponent implements OnInit {
 
-  @Input() folder:ContractData;
-  @Input() onActiveFolder: boolean;
+  folder:ContractData;
   hrTitle: string;
 
-  constructor(private matDialog:MatDialog, private translate:TranslateService) {
+  constructor(private matDialog:MatDialog, private translate:TranslateService, private contractService: ContractsService) {
     this.hrTitle = this.translate.instant('insurance.detail.hrtitle');
    }
 
   ngOnInit() {
 
+    this.folder = this.contractService.selectedFolder;
     const wholeDocTemplate = document.getElementsByClassName('current-detail').item(0) as HTMLElement | null;
 
     if (wholeDocTemplate != null) {

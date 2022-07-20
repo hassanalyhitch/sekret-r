@@ -20,6 +20,6 @@ export class FolderComponent implements OnInit {
 
   onSelect(event: number) {
     this.selectEvent.emit(event);
-    this.router.navigate(['insurance/folder']);
+    // this.router.navigate(['insurance/folder']);
   }
 }

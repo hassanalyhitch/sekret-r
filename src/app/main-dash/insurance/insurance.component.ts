@@ -22,7 +22,6 @@ export class InsuranceComponent implements OnInit, OnDestroy {
   }
 
   onFolderSelect($event) {
-    this.contractService.selectedFolder = $event;
     this.router.navigate(['insurance/folder']);
   }
 
