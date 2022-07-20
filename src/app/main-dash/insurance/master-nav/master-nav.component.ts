@@ -20,7 +20,6 @@ import { ContractsService } from '../../../services/contracts.service';
 })
 export class MasterNavComponent implements OnInit {
   folders: ContractData[] = [];
-  // masternavTitle: string = 'Insurance Folders';
 
   @Output('selection') selectedFolder = new EventEmitter<{}>();
   @Output() reset = new EventEmitter<boolean>();
