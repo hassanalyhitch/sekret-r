@@ -18,7 +18,7 @@
   },
   "insurance": {
     "nav":{
-      "title":"Insurance Folders"
+      "title":"Insurance Contracts"
     },
     "detail":{
       "changename":"Change folder name",

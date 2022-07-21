@@ -11,52 +11,50 @@
   </div>
   <div class="detail-container-wrapper d-flex flex-column pb-3 ">
 
-    <div class="p-3 m-3 d-flex flex-wrap detail-container bg-white ">
-      <div class="d-flex mb-2">
+    <div class=" m-3 d-flex flex-wrap detail-container bg-white ">
+      <div class="d-flex col-12 mb-2">
         <div class="col-lg-6 d-flex flex-column align-self-end p-2">
           <input type="text" required>
-            <span class="highlight"></span>
-            <label>Client Name</label>
+          <label>Client Name</label>
         </div>
-        <div class="col-lg-3 col-xs-12 d-flex flex-column p-2 ">
-          <div class="newlabel">Start Date</div>
-          <input class=" date-div" type='date' >
-          <span class="highlight"></span>
+        <div class="col-lg-2 col-12 d-flex flex-column flex-column-reverse p-2 date-div">
+          <input class=" " type='date' (click)="onStartDateClicked()" #startdate >
+          <div class="datelabel" #startDateLabel>Start Date</div>
         
         </div>
-        <div class="col-lg-3 col-xs-12 d-flex flex-column p-2 ">
-          <div class="newlabel">End Date</div>
-            <input class=" date-div" type='date' >
-            <span class="highlight"></span>
+        <div class="col-lg-2 col-12 d-flex flex-column flex-column-reverse p-2 date-div">
+            <input class=" " type='date' (click)="onEndDateClicked()" #enddate>
+            <div class="datelabel" #endDateLabel>End Date</div>
                        
         </div>
       </div>
 
-      <div class="col-lg-8 d-flex flex-column p-2">
+      <div class="col-lg-8 d-flex flex-column p-2 ml-3 mb-2">
         <input type="text" required>
         <span class="highlight"></span>
         
         <label>Company Name</label>
       </div>
-      <div class="col-lg-8 d-flex flex-column p-2">
+
+      <div class="col-lg-8 d-flex flex-column p-2 ml-3 mb-2">
           <input type="text" required>
           <span class="highlight"></span>
           
           <label>Company Branch</label>
       </div>
-      <div class="col-lg-8 d-flex flex-column p-2">
+      <div class="col-lg-8 d-flex flex-column p-2 ml-3 mb-2">
         <input type="text" required>
         <span class="highlight"></span>
         
         <label>Insurance Policy</label>
       </div>
-      <div class="col-lg-6 d-flex flex-column p-2">
+      <div class="col-lg-6 d-flex flex-column p-2 ml-3 mb-2">
         <input type="text" required>
         <span class="highlight"></span>
        
         <label>Payment Method</label>
       </div>
-      <div class="col-lg-3 col-xs-12 d-flex flex-column p-2">
+      <div class="col-lg-2 col-xs-12 d-flex flex-column p-2 mb-2">
         <input type="text" required>
         <span class="highlight"></span>
        

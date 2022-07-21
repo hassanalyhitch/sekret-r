@@ -103,11 +103,15 @@ label {
   -moz-transition: 0.2s ease all; 
   -webkit-transition: 0.2s ease all; 
 }
-input:focus ~ label, input:valid ~ label {
+input:focus ~ label, input:valid ~ label{
   top:-8px;
   font-size:14px;
   color:#009ee2;
+} 
+.date-div > input {
+  color: #999;
 }
+
 .bar { 
   position: relative; 
   display: block; 
